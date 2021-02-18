@@ -1,12 +1,7 @@
 <?php
 
-try{
-    $db = new PDO('mysql:host=localhost;dbname=piclip;charset=utf8','root', '');
-} catch(Exception $e){
-    echo "Erreur : ".$e;
-}
-
-$salt = "Canard13";
+// Connexion de la base de donnée
+require("../baseDeDonnee.php");
 
 if(isset($_POST['connect'])) {
     $email=$_POST['email'];
