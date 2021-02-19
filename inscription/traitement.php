@@ -19,6 +19,7 @@ if (isset($_POST['submit'])) {
     $email=$_POST['email'];
     $verifemail=$_POST['verifemail'];
     $date_naissance=$_POST['datenaissance'];
+    $date_inscript = date('y-m-d');
 
     if(!empty($pseudo) AND !empty($motdepasse) AND !empty($verifmdp) AND !empty($email) AND !empty($verifemail) AND !empty($date_naissance)){
         if($motdepasse==$verifmdp){
@@ -32,14 +33,14 @@ if (isset($_POST['submit'])) {
                                     $testEmail = $db->query("SELECT id_user FROM users WHERE email='$email'");
                                     if($testEmail->rowCount() <1){
                                         $motdepasse = sha1($salt.$motdepasse);
-                                        $sql= "INSERT INTO users(mot_de_passe, pseudo, email, date_naissance) VALUES (:motdepasse, :pseudo, :email, :date_naissance)";
+                                        $sql= "INSERT INTO users(mot_de_passe, pseudo, email, date_naissance, date_inscript) VALUES (:motdepasse, :pseudo, :email, :date_naissance, :date_inscript)";
                                         $req = $db->prepare($sql);  
                                         $req->execute(array(
                                             'motdepasse' => $motdepasse,
                                             'pseudo' => $pseudo,
                                             'email' => $email,
                                             'date_naissance' => $date_naissance,
-
+                                            'date_inscript' => $date_inscript,
                                         ));
                                         header('Location: ../profil/profil.php');
                                     }else{ $return = "Email déjà utilisé";
