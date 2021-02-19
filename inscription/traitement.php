@@ -21,13 +21,13 @@ if (isset($_POST['submit'])) {
                     if($email == $verifemail) {   
                         if($pseudo != "utilisateur") {
                             if((strlen($pseudo) <= 25) AND (strlen($pseudo) >= 6)){
-                                $TestUser = $db->query("SELECT id_user FROM users WHERE pseudo='$pseudo'");   
+                                $TestUser = $bdd->query("SELECT id_user FROM users WHERE pseudo='$pseudo'");   
                                 if($TestUser->rowCount() < 1){
-                                    $testEmail = $db->query("SELECT id_user FROM users WHERE email='$email'");
+                                    $testEmail = $bdd->query("SELECT id_user FROM users WHERE email='$email'");
                                     if($testEmail->rowCount() <1){
                                         $motdepasse = sha1($salt.$motdepasse);
                                         $sql= "INSERT INTO users(mot_de_passe, pseudo, email, date_naissance) VALUES (:motdepasse, :pseudo, :email, :date_naissance)";
-                                        $req = $db->prepare($sql);  
+                                        $req = $bdd->prepare($sql);  
                                         $req->execute(array(
                                             'motdepasse' => $motdepasse,
                                             'pseudo' => $pseudo,

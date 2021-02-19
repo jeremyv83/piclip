@@ -1,5 +1,6 @@
 <?php
-include("../baseDeDonnee.php")
+require("traitement.php");
+
 ?>
 
 <!DOCTYPE html>

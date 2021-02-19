@@ -9,7 +9,7 @@ if(isset($_POST['connect'])) {
     $motdepasse=sha1($salt.$_POST['motdepasse']);  //IL FAUDRA PRENDRE UNIQUEMENT CELLE LA POUR LE $motdepasse
    
    if(!empty($email) AND !empty($motdepasse)) {
-      $VerifPseudo = $db->query("SELECT * FROM users WHERE email='$email' AND mot_de_passe='$motdepasse'");
+      $VerifPseudo = $bdd->query("SELECT * FROM users WHERE email='$email' AND mot_de_passe='$motdepasse'");
       $UserData = $VerifPseudo->fetch();
       if($VerifPseudo->rowCount() == 1){
 
