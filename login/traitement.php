@@ -22,7 +22,7 @@ if(isset($_POST['connect'])) {
     
       }else{
           $return = "Les identifiants sont invalides.";
-          echo $return;
+          
         } 
    }
 }

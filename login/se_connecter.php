@@ -16,7 +16,7 @@ include("traitement.php");
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
 			rel="stylesheet"
 		/>
-		<title>se connecter</title>
+		<title>Piclip - Se connecter</title>
 	</head>
 	<body>
 		<header>
@@ -29,6 +29,13 @@ include("traitement.php");
 		<div id="card">
 			<h1>Se connecter à</h1>
 			<img src="../img/Plan de travail 16.png" id="logogris" alt="" />
+			<?php 
+            // afficher le(s) message(s) d'erreur(s)
+            if(isset($_POST['connect']) AND isset($return)){ 
+                ?> <p style="color:#FF0000;margin-left:230px;"><?php echo $return; ?></p>
+                <?php  
+
+            } ?>
 			<div class="informations">
 				<div class="liste_informations">
 					<h2>Adresse email:</h2>

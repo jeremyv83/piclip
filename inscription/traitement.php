@@ -43,34 +43,24 @@ if (isset($_POST['submit'])) {
                                             'date_inscript' => $date_inscript,
                                         ));
                                         header('Location: ../profil/profil.php');
-                                    }else{ $return = "Email déjà utilisé";
-                                         echo $return;   
-                                    }    
+                                    }else $return = "Email déjà utilisé";  
                                 //header('Location: connect.php');
-                                }else{ $return = "Pseudo déjà utilisé";
-                                    echo $return;
-                                }
-                            }else{ $return = "Le pseudo doit être compris entre 6 et 25 caractères";
-                                echo $return;
-                            }
-                        }else{$return = 'Le pseudo ne peut pas être "utilisateur"';
-                            echo $return;                            
-                        }     
-                    }else{$return ="L'adresse mail n'est pas identique'";
-                        echo $return;  
-                    }      
-                }else{$return ="Le mail n'est pas valable";
-                    echo $return;
-                }
-            }else{ $return = "Le mot de passe n'est pas assez sécurisé";
-                echo $return;
-            }   
-        }else{ $return = "Les deux mots de passe de correspondent pas";
-            echo $return;
-        }
-    }else{ $return = "Un ou plusieurs champs est manquant";
-        echo $return;
-    }
+                                }else $return = "Pseudo déjà utilisé";
+                                
+                            }else $return = "Le pseudo doit être compris entre 6 et 25 caractères";
+                            
+                        }else $return = 'Le pseudo ne peut pas être "utilisateur"';                          
+                            
+                    }else $return ="L'adresse mail n'est pas identique'";
+                          
+                }else $return ="Le mail n'est pas valable";
+                
+            }else $return = "Le mot de passe n'est pas assez sécurisé";
+              
+        }else $return = "Les deux mots de passe de correspondent pas";
+        
+    }else $return = "Un ou plusieurs champs est manquant";
+    
 }
 
 // if(isset($_POST['login'])) {

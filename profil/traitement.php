@@ -3,7 +3,7 @@
 
 try {
     $bdd = new PDO ('mysql:host=localhost;dbname=piclip;charset=utf8','root', 'root');
-    $requete = "SELECT * FROM users WHERE pseudo = 'test124'"; //session//
+    $requete = "SELECT * FROM users WHERE id_user = '14'"; //session//
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $bdd->exec("SET NAMES 'utf8'");
   
@@ -28,8 +28,8 @@ catch(Exception $e) {
   
         
 //      var_dump($_SESSION['pseudo']);
-if(isset($_POST['profil'])){
-  header("Location: ../modif_profil/modif_profil.php");
+if(isset($_POST['modif_profil'])){
+    header("Location: ../modif_profil/modif_profil.php");
 }
 
 

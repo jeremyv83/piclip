@@ -43,12 +43,12 @@ include("traitement.php");
                                     <p> <b>Date d'inscription:</b> <?php echo $date_inscript; ?></p> 
                                 </div>
                                 <div class="imgavatar">
-                                    <img id="avatar" src = "../img/bebeyoda.png"> 
+                                    <img id="avatar" src = "<?php echo $avatar ?>"> 
                                       <?php #echo $avatar ?> 
                                 </div>
                             </div>
                             <div class="buttons">
-                                <button type="submit" id="submit" name="profil">Modifier le profil</button>
+                                <button type="submit" id="submit" name="modif_profil">Modifier le profil</button>
                                 <button type="submit" id="submit" name="avatar">Modifier l'avatar</button>
                             </div>
                         </form>
