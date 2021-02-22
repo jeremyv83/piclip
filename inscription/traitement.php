@@ -1,12 +1,6 @@
 <?php
-
-try{
-    $db = new PDO('mysql:host=localhost;dbname=piclip;charset=utf8','root', 'root');
-    //modifier cette adresse//
-} catch(Exception $e){
-    echo "Erreur : ".$e;
-}
-$salt = "Canard13";
+// Connexion de la base de donnée
+require("../baseDeDonnee.php");
 
 //include("traitement.php"); //a modifier//
 //Inscription
@@ -28,13 +22,15 @@ if (isset($_POST['submit'])) {
                     if($email == $verifemail) {   
                         if($pseudo != "utilisateur") {
                             if((strlen($pseudo) <= 25) AND (strlen($pseudo) >= 6)){
-                                $TestUser = $db->query("SELECT id_user FROM users WHERE pseudo='$pseudo'");   
+                                $TestUser = $bdd->query("SELECT id_user FROM users WHERE pseudo='$pseudo'");   
                                 if($TestUser->rowCount() < 1){
-                                    $testEmail = $db->query("SELECT id_user FROM users WHERE email='$email'");
+                                    $testEmail = $bdd->query("SELECT id_user FROM users WHERE email='$email'");
                                     if($testEmail->rowCount() <1){
                                         $motdepasse = sha1($salt.$motdepasse);
-                                        $sql= "INSERT INTO users(mot_de_passe, pseudo, email, date_naissance, date_inscript) VALUES (:motdepasse, :pseudo, :email, :date_naissance, :date_inscript)";
-                                        $req = $db->prepare($sql);  
+
+                                        $sql= "INSERT INTO users(mot_de_passe, pseudo, email, date_naissance) VALUES (:motdepasse, :pseudo, :email, :date_naissance)";
+                                        $req = $bdd->prepare($sql);  
+
                                         $req->execute(array(
                                             'motdepasse' => $motdepasse,
                                             'pseudo' => $pseudo,
