@@ -35,6 +35,7 @@ if (isset($_POST['submit'])) {
                                             'date_naissance' => $date_naissance,
 
                                         ));
+                                        header('Location: ../profil/profil.php');
                                     }else{ $return = "Email déjà utilisé";
                                          echo $return;   
                                     }    
@@ -66,7 +67,7 @@ if (isset($_POST['submit'])) {
 }
 
 // if(isset($_POST['login'])) {
-//     header('Location: ../login/index.php');
+//     header('Location: ../login/index.php';
 // }
 
 

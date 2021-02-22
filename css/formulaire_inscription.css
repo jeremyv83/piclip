@@ -30,6 +30,8 @@ a:hover {
 
 img {
 	width: 100px;
+	height: 56px;
+
 }
 
 #card {
@@ -43,6 +45,7 @@ img {
 
 #logogris {
 	width: 150px;
+	height: 84px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
