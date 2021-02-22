@@ -13,6 +13,7 @@ if (isset($_POST['submit'])) {
     $email=$_POST['email'];
     $verifemail=$_POST['verifemail'];
     $date_naissance=$_POST['datenaissance'];
+    $date_inscript = date('y-m-d');
 
     if(!empty($pseudo) AND !empty($motdepasse) AND !empty($verifmdp) AND !empty($email) AND !empty($verifemail) AND !empty($date_naissance)){
         if($motdepasse==$verifmdp){
@@ -26,44 +27,36 @@ if (isset($_POST['submit'])) {
                                     $testEmail = $bdd->query("SELECT id_user FROM users WHERE email='$email'");
                                     if($testEmail->rowCount() <1){
                                         $motdepasse = sha1($salt.$motdepasse);
+
                                         $sql= "INSERT INTO users(mot_de_passe, pseudo, email, date_naissance) VALUES (:motdepasse, :pseudo, :email, :date_naissance)";
                                         $req = $bdd->prepare($sql);  
+
                                         $req->execute(array(
                                             'motdepasse' => $motdepasse,
                                             'pseudo' => $pseudo,
                                             'email' => $email,
                                             'date_naissance' => $date_naissance,
-
+                                            'date_inscript' => $date_inscript,
                                         ));
                                         header('Location: ../profil/profil.php');
-                                    }else{ $return = "Email déjà utilisé";
-                                         echo $return;   
-                                    }    
+                                    }else $return = "Email déjà utilisé";  
                                 //header('Location: connect.php');
-                                }else{ $return = "Pseudo déjà utilisé";
-                                    echo $return;
-                                }
-                            }else{ $return = "Le pseudo doit être compris entre 6 et 25 caractères";
-                                echo $return;
-                            }
-                        }else{$return = 'Le pseudo ne peut pas être "utilisateur"';
-                            echo $return;                            
-                        }     
-                    }else{$return ="L'adresse mail n'est pas identique'";
-                        echo $return;  
-                    }      
-                }else{$return ="Le mail n'est pas valable";
-                    echo $return;
-                }
-            }else{ $return = "Le mot de passe n'est pas assez sécurisé";
-                echo $return;
-            }   
-        }else{ $return = "Les deux mots de passe de correspondent pas";
-            echo $return;
-        }
-    }else{ $return = "Un ou plusieurs champs est manquant";
-        echo $return;
-    }
+                                }else $return = "Pseudo déjà utilisé";
+                                
+                            }else $return = "Le pseudo doit être compris entre 6 et 25 caractères";
+                            
+                        }else $return = 'Le pseudo ne peut pas être "utilisateur"';                          
+                            
+                    }else $return ="L'adresse mail n'est pas identique'";
+                          
+                }else $return ="Le mail n'est pas valable";
+                
+            }else $return = "Le mot de passe n'est pas assez sécurisé";
+              
+        }else $return = "Les deux mots de passe de correspondent pas";
+        
+    }else $return = "Un ou plusieurs champs est manquant";
+    
 }
 
 // if(isset($_POST['login'])) {

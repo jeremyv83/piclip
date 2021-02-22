@@ -14,7 +14,7 @@
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
 			rel="stylesheet"
 		/>
-		<title>s'inscrire</title>
+		<title>Piclip - S'inscrire</title>
 	</head>
 	<body>
 		<header>
@@ -27,6 +27,13 @@
 		<div id="card">
 			<h1>S'inscrire sur</h1>
 			<img src="../img/Plan de travail 16.png" id="logogris" alt="" />
+			<?php 
+            // afficher le(s) message(s) d'erreur(s)
+            if(isset($_POST['submit']) AND isset($return)){ 
+                ?> <p style="color:#FF0000;margin-left:230px;"><?php echo $return; ?></p>
+                <?php  
+
+            } ?>
 			<div class="informations">
 				<div class="liste_informations">
 					<h2>Pseudo:</h2>
@@ -38,7 +45,7 @@
 					<h2>Date de naissance</h2>
 					<h2>Acceptez les conditions d'utilisation Piclip:</h2>
 				</div>
-				<form action="#" method="POST">
+				<form method="POST">
 					<div class="liste_input">
 						<input type="text" name="pseudo" />
 						<input type="email" name="email"/>
