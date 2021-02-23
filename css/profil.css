@@ -20,62 +20,61 @@ header {
 	margin-top: 10px;
 }
 
-header img{
+header img {
 	width: 100px;
 	height: 56px;
 }
 
-h1{
+h1 {
 	text-align: center;
 	text-decoration: underline;
 	font-size: 50px;
 	margin: 20px;
 }
 
-h2{
+h2 {
 	text-align: center;
 	padding: 20px;
 }
 
-.informationsdeprofil{
+.informationsdeprofil {
 	background-color: #2a2a2a;
 	width: 70%;
 	margin: 10px auto;
 }
 
-.infoavatar{
+.infoavatar {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	margin: 0 10%;
 }
 
-.infotext{
-
+.infotext {
 }
 
-.infotext p{
+.infotext p {
 	margin: 10px 0;
 	font-size: large;
 }
 
-.imgavatar img{
+.imgavatar img {
 	border-radius: 50%;
 }
 
-#avatar{
+#avatar {
 	width: 200px;
-	height: 200px
+	height: 200px;
 }
 
-.buttons{
+.buttons {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	margin: 20px 0;
 }
 
-button{
+button {
 	background-color: #151515;
 	padding: 10px 10px 10px 10px;
 	margin: 20px 0;
@@ -85,44 +84,95 @@ button{
 	font-weight: bold;
 }
 
-button:hover{
+button:hover {
 	transition: all 0.5s;
 	/*border-bottom: solid 3px #ffffff;*/
 	color: #151515;
 	background-color: #ffffff;
 }
-
-.Mes{
+.buttonsphotovideos {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
-	width: 70%;
-	margin: 0px auto;
-	
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
 }
 
-.Mes button{
-	background-color: #2a2a2a;
-	padding: 10px 10px 10px 10px;
-	margin: 20px 0;
-	height: 60px;
-	width: 300px;
-	border: none;
-	font-size: 30px;
-	/*font-weight: bold;*/
+.buttonsphotovideos a {
+	position: relative;
+	display: inline-block;
+	padding: 15px 30px;
+	border: 2px solid #2a2a2a;
+	margin: 40px;
+	text-transform: uppercase;
+	font-weight: 600;
+	text-decoration: none;
+	letter-spacing: 3px;
+	color: #fff;
+	/*-webkit-box-reflect: below 0px linear-gradient(transparent, #151517);*/
+	transition: 0.5s;
+	transition-delay: 0s;
 }
 
-.Mes button:hover{
-	background-color: white;
-	color: #151515;
+.buttonsphotovideos a:hover {
+	transition-delay: 1.5s;
+	color: #fff;
+	box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff;
 }
 
-.poste img{
-	
-	
+.buttonsphotovideos a span {
+	position: relative;
+	z-index: 100;
 }
 
-.poste{
+.buttonsphotovideos a::before {
+	content: "";
+	position: absolute;
+	left: -20px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 2px;
+	background: #2a2a2a;
+	box-shadow: 5px -8px 0 #2a2a2a, 5px 8px 0 #2a2a2a;
+	transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+	transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.buttonsphotovideos a:hover::before {
+	width: 60%;
+	height: 100%;
+	left: -2px;
+	box-shadow: 5px 0 0 #2a2a2a, 5px 0 0 #2a2a2a;
+	transition-delay: 0s, 0.5s, 1s, 1s;
+}
+
+.buttonsphotovideos a::after {
+	content: "";
+	position: absolute;
+	right: -20px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 2px;
+	background: #2a2a2a;
+	box-shadow: -5px -8px 0 #2a2a2a, -5px 8px 0 #2a2a2a;
+	transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+	transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.buttonsphotovideos a:hover::after {
+	width: 60%;
+	height: 100%;
+	right: -2px;
+	box-shadow: -5px 0 0 #2a2a2a, -5px 0 0 #2a2a2a;
+	transition-delay: 0s, 0.5s, 1s, 1s;
+}
+
+.poste img {
+}
+
+.poste {
 	width: 70%;
 	display: flex;
 	flex-direction: row;
@@ -130,12 +180,12 @@ button:hover{
 	margin: 20px auto;
 }
 
-a {
+header a {
 	line-height: 50px;
 	text-decoration: none;
 }
 
-a:hover {
+header a:hover {
 	transition: all 0.2s;
 	border-bottom: solid 4px white;
 }

@@ -3,7 +3,7 @@
 
 try {
     $id_user = 14;
-    $bdd = new PDO ('mysql:host=localhost;dbname=piclip;charset=utf8','root', 'root');
+    $bdd = new PDO ('mysql:host=localhost;dbname=piclip;charset=utf8','root', '');
     $requete = "SELECT * FROM users WHERE id_user = '$id_user'"; //session//
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $bdd->exec("SET NAMES 'utf8'");

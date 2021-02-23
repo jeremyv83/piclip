@@ -51,12 +51,13 @@ include("traitement.php");
                                 <button type="submit" id="submit" name="modif_profil">Modifier le profil</button>
                                 <button type="submit" id="submit" name="avatar">Modifier l'avatar</button>
                             </div>
+                            
                         </form>
                 </div>
-                <div class="Mes">
-                <button type="submit" id="submit" name="submit">Mes Photos</button>
-                <button type="submit" id="submit" name="submit">Mes vidéos</button>
-                </div>
+                <div class="buttonsphotovideos">
+			                    <a href="#"><span>Mes Photos</span></a>
+			                    <a href="#"><span>Mes Vidéos</span></a>
+		                    </div>
                 <div class="poste">
                     <img src="../img/postephotos.png" alt="" />    
                     <img src="../img/postevideos.png" alt="" />
