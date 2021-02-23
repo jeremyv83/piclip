@@ -18,15 +18,14 @@ include("traitement.php");
     <title>Profil utilisateur</title>
 </head>
     <body>
-        <header>
-        <a href="../bienvenue/bienvenue.html"
-				><img src="../img/Plan de travail 6.png" alt=""
-			/></a>
-			<a href="../home/home.html">Home</a>
-			<a href="../galerie/galerie.html">Galerie</a>
-			<a href="">Se déconnecter <!-- créer une action pour se déconnecter--></a>
-			<a href="../profil/profil.php">Mon profil</a>
-		</header>
+    <?php include("../navbar/navbar.php"); ?>
+		<!--<header>
+			<img src="../img/Plan de travail 6.png" alt="" />
+			<a href="">Home</a>
+			<a href="">Galerie</a>
+			<a href="">Se connecter</a>
+			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
+		</header>-->
 
                 <h1>Profil de <?php echo $pseudo; ?></h1>
                 <div class="informationsdeprofil">   
