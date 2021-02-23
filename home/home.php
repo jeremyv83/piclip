@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if(isset($_SESSION["id"])) {
+		$id_user = $_SESSION["id"];
+	}else header("Location: ../login/se_connecter.php");
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 	<head>

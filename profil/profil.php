@@ -17,15 +17,7 @@ include("traitement.php");
     <title>Profil utilisateur</title>
 </head>
     <body>
-    <header>
-    <a href="../bienvenue/bienvenue.html"
-				><img src="../img/Plan de travail 6.png" alt=""
-			/></a>
-			<a href="../home/home.php">Home</a>
-			<a href="..galerie/galerie.php">Galerie</a>
-			<a href="">Se déconnecter</a>
-			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
-		</header>
+    <?php include("../navbar/navBar.php"); ?>
         
                 <h1>Profil de <?php echo $pseudo; ?></h1>
                 <div class="informationsdeprofil">   
