@@ -1,9 +1,12 @@
 <?php 
+session_start();
+require("../baseDeDonnee.php");
 
+if(isset($_SESSION["id"])) {
+    $id_user = $_SESSION["id"];
+}else header("Location: ../login/se_connecter.php");
 
-try {
-    $id_user = 14;
-    $bdd = new PDO ('mysql:host=localhost;dbname=piclip;charset=utf8','root', 'root');
+    
     $requete = "SELECT * FROM users WHERE id_user = '$id_user'"; //session//
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $bdd->exec("SET NAMES 'utf8'");
@@ -20,17 +23,15 @@ try {
     $date_inscript_us = $donneeUser['date_inscript'];
     $date_inscript = implode('/',array_reverse(explode('-',$date_inscript_us)));
     $avatar = $donneeUser['route_avatar'];
-}
-catch(Exception $e) {
-    die("erreur:".$e -> getMessage());
-  } 
+
+
 
 //  while ($row = $sql -> fetch()) {
   
        
 //      var_dump($_SESSION['pseudo']);
 if(isset($_POST['profil'])){
-    header("Location: ../profil/modif_profil.php");
+    header("Location: ../profil/profil.php");
 }
 
 if(isset($_POST['new_pseudo'])){
@@ -135,12 +136,15 @@ if(isset($_POST['new_avatar'])) {
             if(move_uploaded_file($file_tmp_name, $file_dest)){
                 $req = $bdd->prepare("UPDATE users SET route_avatar = :file_dest WHERE id_user = '$id_user'");
                 $req->execute(array('file_dest'=>$file_dest));
+                header("Location: ../modif_profil/modif_profil.php");
             }else $return = "Message ?";
         }else $return = "Seules les images en jpg et png sont autorisées.";
             
         
     }
 }
+
+
 
 //include("traitement.php"); //a modifier//
 //Inscription
