@@ -19,13 +19,14 @@ require("traitement.php");
 		<title>poste photo</title>
 	</head>
 	<body>
-		<header>
+		<?php include("../navbar/navbar.php"); ?>
+		<!--<header>
 			<img src="../img/Plan de travail 6.png" alt="" />
 			<a href="">Home</a>
 			<a href="">Galerie</a>
 			<a href="">Se connecter</a>
 			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
-		</header>
+		</header>-->
 
 		<h1>Poste des photos</h1>
 		<div class="photos">
