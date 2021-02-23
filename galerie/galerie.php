@@ -17,18 +17,18 @@
 			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
 		</header>-->
 		<div class="container">
-			<a href="../galerie_photos/galerie_photos.html"
+			<a href="../galerie_photos/galerie_photos.php"
 				><span>Galerie Photos</span></a
 			>
-			<a href="../galerie_videos/galerie_videos.html"
+			<a href="../galerie_videos/galerie_videos.php"
 				><span>Galerie Vidéos</span></a
 			>
 		</div>
 		<footer>
 			<div class="block1">
 				<h4>Conditions d'utilisation</h4>
-				<h4 href="../home/home.html">Home</h4>
-				<h4 href="../galerie/galerie.html">Galerie</h4>
+				<h4 href="../home/home.php">Home</h4>
+				<h4 href="../galerie/galerie.php">Galerie</h4>
 			</div>
 			<div class="block2">
 				<h4>Politique de confidentialité</h4>
