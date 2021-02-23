@@ -19,6 +19,7 @@ require("traitement.php");
 		<title>poste photo</title>
 	</head>
 	<body>
+<<<<<<< HEAD
 		<header>
 		<a href="../bienvenue/bienvenue.html"
 				><img src="../img/Plan de travail 6.png" alt=""
@@ -26,8 +27,16 @@ require("traitement.php");
 			<a href="../home/home.html">Home</a>
 			<a href="../galerie/galerie.html">Galerie</a>
 			<a href="">Se déconnecter</a>
+=======
+		<?php include("../navbar/navbar.php"); ?>
+		<!--<header>
+			<img src="../img/Plan de travail 6.png" alt="" />
+			<a href="">Home</a>
+			<a href="">Galerie</a>
+			<a href="">Se connecter</a>
+>>>>>>> origin/Jeremy
 			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
-		</header>
+		</header>-->
 
 		<h1>Poste des photos</h1>
 		<div class="photos">
