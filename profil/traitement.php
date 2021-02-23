@@ -1,9 +1,12 @@
 <?php 
+session_start();
+require("../baseDeDonnee.php");
 
+if(isset($_SESSION["id"])) {
+    $id_user = $_SESSION["id"];
+}else header("Location: ../login/se_connecter.php");
 
-try {
-    $bdd = new PDO ('mysql:host=localhost;dbname=piclip;charset=utf8','root', '');
-    $requete = "SELECT * FROM users WHERE id_user = '14'"; //session//
+    $requete = "SELECT * FROM users WHERE id_user = '$id_user'"; //session//
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $bdd->exec("SET NAMES 'utf8'");
   
@@ -19,10 +22,7 @@ try {
     $date_inscript_us = $donneeUser['date_inscript'];
     $date_inscript = implode('/',array_reverse(explode('-',$date_inscript_us)));
     $avatar = $donneeUser['route_avatar'];
-}
-catch(Exception $e) {
-    die("erreur:".$e -> getMessage());
-  } 
+
 
 //  while ($row = $sql -> fetch()) {
   

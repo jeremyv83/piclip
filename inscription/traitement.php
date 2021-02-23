@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Connexion de la base de donnée
 require("../baseDeDonnee.php");
 
@@ -28,7 +29,7 @@ if (isset($_POST['submit'])) {
                                     if($testEmail->rowCount() <1){
                                         $motdepasse = sha1($salt.$motdepasse);
 
-                                        $sql= "INSERT INTO users(mot_de_passe, pseudo, email, date_naissance) VALUES (:motdepasse, :pseudo, :email, :date_naissance)";
+                                        $sql= "INSERT INTO users(mot_de_passe, pseudo, email, date_naissance, date_inscript) VALUES (:motdepasse, :pseudo, :email, :date_naissance, :date_inscript)";
                                         $req = $bdd->prepare($sql);  
 
                                         $req->execute(array(
@@ -38,6 +39,8 @@ if (isset($_POST['submit'])) {
                                             'date_naissance' => $date_naissance,
                                             'date_inscript' => $date_inscript,
                                         ));
+                                        $UserData = $TestUser->fetch();
+                                        $SESSION["id"] = $UserData["id_user"];
                                         header('Location: ../profil/profil.php');
                                     }else $return = "Email déjà utilisé";  
                                 //header('Location: connect.php');
