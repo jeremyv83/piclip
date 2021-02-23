@@ -9,7 +9,7 @@ include("traitement.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/profil.css" />
+    <link rel="stylesheet" href="../css/modif_profil.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
@@ -19,11 +19,13 @@ include("traitement.php");
 </head>
     <body>
         <header>
-			<img src="../img/Plan de travail 6.png" alt="" />
-			<a href="">Home</a>
-			<a href="">Galerie</a>
-			<a href="">Se connecter</a>
-			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
+        <a href="../bienvenue/bienvenue.html"
+				><img src="../img/Plan de travail 6.png" alt=""
+			/></a>
+			<a href="../home/home.html">Home</a>
+			<a href="../galerie/galerie.html">Galerie</a>
+			<a href="">Se déconnecter <!-- créer une action pour se déconnecter--></a>
+			<a href="../profil/profil.php">Mon profil</a>
 		</header>
 
                 <h1>Profil de <?php echo $pseudo; ?></h1>

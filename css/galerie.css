@@ -1,0 +1,133 @@
+* {
+	/*background-color: #151515;*/
+	color: #ffffff;
+	font-family: "Montserrat", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+
+body {
+	margin: 10px 100px;
+	background-color: #151515;
+	min-height: 100vh;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-top: 10px;
+}
+
+header img {
+	width: 100px;
+	height: 56px;
+}
+
+header a {
+	line-height: 50px;
+	text-decoration: none;
+}
+
+header a:hover {
+	transition: all 0.2s;
+	border-bottom: solid 4px white;
+}
+
+.container {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	text-align: center;
+	margin-top: 10em;
+}
+
+.container a {
+	position: relative;
+	display: inline-block;
+	padding: 50px 100px;
+	border: 2px solid #2a2a2a;
+	margin: 40px;
+	margin-bottom: 100px;
+	text-transform: uppercase;
+	font-weight: 600;
+	text-decoration: none;
+	letter-spacing: 3px;
+	color: #fff;
+	-webkit-box-reflect: below 5px linear-gradient(transparent, #151515);
+	transition: 0.5s;
+	transition-delay: 0s;
+}
+
+.container a:hover {
+	transition-delay: 1.5s;
+	color: #fff;
+	box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff;
+}
+
+.container a span {
+	position: relative;
+	z-index: 100;
+}
+
+.container a:nth-child(2) {
+	filter: hue-rotate(80deg);
+}
+
+.container a::before {
+	content: "";
+	position: absolute;
+	left: -20px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 2px;
+	background: #2a2a2a;
+	box-shadow: 5px -8px 0 #2a2a2a, 5px 8px 0 #2a2a2a;
+	transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+	transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.container a:hover::before {
+	width: 60%;
+	height: 100%;
+	left: -2px;
+	box-shadow: 5px 0 0 #2a2a2a, 5px 0 0 #2a2a2a;
+	transition-delay: 0s, 0.5s, 1s, 1s;
+}
+
+.container a::after {
+	content: "";
+	position: absolute;
+	right: -20px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 2px;
+	background: #2a2a2a;
+	box-shadow: -5px -8px 0 #2a2a2a, -5px 8px 0 #2a2a2a;
+	transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+	transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.container a:hover::after {
+	width: 60%;
+	height: 100%;
+	right: -2px;
+	box-shadow: -5px 0 0 #2a2a2a, -5px 0 0 #2a2a2a;
+	transition-delay: 0s, 0.5s, 1s, 1s;
+}
+
+@media (max-width: 700px) {
+	header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: 10px;
+	}
+}

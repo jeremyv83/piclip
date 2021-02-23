@@ -18,10 +18,12 @@ include("traitement.php");
 </head>
     <body>
     <header>
-			<img src="../img/Plan de travail 6.png" alt="" />
-			<a href="">Home</a>
-			<a href="">Galerie</a>
-			<a href="">Se connecter</a>
+    <a href="../bienvenue/bienvenue.html"
+				><img src="../img/Plan de travail 6.png" alt=""
+			/></a>
+			<a href="../home/home.html">Home</a>
+			<a href="..galerie/galerie.html">Galerie</a>
+			<a href="">Se déconnecter</a>
 			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
 		</header>
         
@@ -49,36 +51,35 @@ include("traitement.php");
                             </div>
                             <div class="buttons">
                                 <button type="submit" id="submit" name="modif_profil">Modifier le profil</button>
-                                <button type="submit" id="submit" name="avatar">Modifier l'avatar</button>
                             </div>
                             
                         </form>
                 </div>
                 <div class="buttonsphotovideos">
-			                    <a href="#"><span>Mes Photos</span></a>
-			                    <a href="#"><span>Mes Vidéos</span></a>
+			                    <a href="../poste_photo/poste_photo.php"><span>Mes Photos</span></a>
+			                    <a href="../poste_video/poste_video.php"><span>Mes Vidéos</span></a>
 		                    </div>
                 <div class="poste">
-                    <img src="../img/postephotos.png" alt="" />    
-                    <img src="../img/postevideos.png" alt="" />
+                    <img src="../img/postephotos.png" alt="Cliques ici pour poster de nouvelles photos!" />    
+                    <img src="../img/postevideos.png" alt="Cliques ici pour poster de nouvelles vidéos!" />
                 </div>
                 <footer>
 			<div class="block1">
 				<h4>Conditions d'utilisation</h4>
-				<h4>Home</h4>
-				<h4>Galerie</h4>
+				<h4 href="../home/home.html">Home</h4>
+				<h4 href="..galerie/galerie.html">Galerie</h4>
 			</div>
 			<div class="block2">
 				<h4>Politique de confidentialité</h4>
-				<h4>Se connecter</h4>
-				<h4>S'inscrire</h4>
+				<h4 href="../login/se_connecter.php">Se connecter</h4>
+				<h4 href="../inscription/formulaire_inscription.php">S'inscrire</h4>
 			</div>
 			<div class="block3">
 				<h4>Aide</h4>
 				<h4>Utilisateurs</h4>
 			</div>
 			<div class="block4">
-				<h4>A propos</h4>
+				<h4 href="">A propos</h4>
 				<img src="../img/Plan de travail 16.png" alt="" />
 			</div>
 		</footer>
