@@ -12,6 +12,14 @@ require("traitement.php");
     <title>Document</title>
 </head>
 <body>
+<?php include("../navbar/navbar.php"); ?>
+		<!--<header>
+			<img src="../img/Plan de travail 6.png" alt="" />
+			<a href="">Home</a>
+			<a href="">Galerie</a>
+			<a href="">Se connecter</a>
+			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
+		</header>-->
     <form method="POST" enctype="multipart/form-data">
         <p>Mettre la video : </p>
         <input type="file" name="video"/>

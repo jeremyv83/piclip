@@ -13,15 +13,14 @@
 		<title>Home</title>
 	</head>
 	<body>
-		<header>
-			<a href="../bienvenue/bienvenue.html"
-				><img src="../img/Plan de travail 6.png" alt=""
-			/></a>
+		<?php include("../navbar/navbar.php"); ?>
+		<!--<header>
+			<img src="../img/Plan de travail 6.png" alt="" />
 			<a href="">Home</a>
-			<a href="../galerie/galerie.html">Galerie</a>
-			<a href="../login/se_connecter.php">Se connecter</a>
+			<a href="">Galerie</a>
+			<a href="">Se connecter</a>
 			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
-		</header>
+		</header>-->
 		<div id="slider">
 			<input type="radio" name="slider" id="slide1" checked />
 			<input type="radio" name="slider" id="slide2" />

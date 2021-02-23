@@ -4,26 +4,26 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="../css/photo_click.css" />
+		<link rel="stylesheet" href="../css/video_click.css" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
 			rel="stylesheet"
 		/>
-		<title>Photo</title>
+		<title>Vidéo</title>
 	</head>
 	<body>
-		<header>
-			<a href="../bienvenue/bienvenue.html"
-				><img src="../img/Plan de travail 6.png" alt=""
-			/></a>
-			<a href="../home/home.html">Home</a>
-			<a href="../galerie/galerie.html">Galerie</a>
-			<a href="">Se déconnecter</a>
+	
+		<?php include("../navbar/navbar.php"); ?>
+		<!--<header>
+			<img src="../img/Plan de travail 6.png" alt="" />
+			<a href="">Home</a>
+			<a href="">Galerie</a>
+			<a href="">Se connecter</a>
 			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
-		</header>
+		</header>-->
 
-		<h1>Photos</h1>
+		<h1>Vidéo</h1>
 		<div class="photos">
 			<div class="card">
 				<img src="../img/1.jpg" alt="" />
@@ -45,15 +45,16 @@
 		<footer>
 			<div class="block1">
 				<h4>Conditions d'utilisation</h4>
-				<h4 href="../home/home.html">Home</h4>
-				<h4 href="../galerie/galerie.html">Galerie</h4>
+				<h4><a href="../home/home.html">Home</a></h4>
+				<h4><a href="../galerie/galerie.html">Galerie</a></h4>
 			</div>
 			<div class="block2">
 				<h4>Politique de confidentialité</h4>
-				<h4 href="../login/se_connecter.php">Se connecter</h4>
+				<h4><a href="../login/se_connecter.php">Se connecter</a></h4>
 				<h4>
-					<a href="../inscription/formulaire_inscription.php"></a>
-					S'inscrire
+					<a href="../inscription/formulaire_inscription.php">
+						S'inscrire</a
+					>
 				</h4>
 			</div>
 			<div class="block3">
@@ -62,7 +63,9 @@
 			</div>
 			<div class="block4">
 				<h4>A propos</h4>
-				<img src="../img/Plan de travail 16.png" alt="" />
+				<a href="../bienvenue/bienvenue.html"
+					><img src="../img/Plan de travail 16.png" alt=""
+				/></a>
 			</div>
 		</footer>
 	</body>
