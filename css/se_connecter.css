@@ -67,13 +67,17 @@ h2 {
 }
 
 .liste_informations {
-	width: 70%;
+	width: 50%;
 	text-align: center;
 	margin: 30px 0;
 }
 
+.liste_input_up {
+	width: 50%;
+}
+
 .liste_input {
-	width: 70%;
+	width: 100%;
 	margin: 35px 0;
 }
 
@@ -83,6 +87,7 @@ input {
 	margin: 8px 0;
 	border: black;
 	background-color: #151515;
+	padding-left: 10px;
 }
 
 .buttons {
@@ -96,13 +101,15 @@ button {
 	width: 30%;
 	height: 50px;
 	background-color: #151515;
+	transition: 0.5s;
 }
 
 button:hover {
 	color: #151515;
-	background-color: #8d8d8d;
+	background-color: white;
 	transition: all 0.3s;
 	border-radius: 20px;
+	box-shadow: 0 0 30px white;
 }
 
 .mdpOublie {
@@ -133,6 +140,20 @@ h4 {
 h4:hover {
 	text-decoration: underline;
 }
+@media (max-width: 1000px) {
+	body {
+		margin: 10px 10px;
+	}
+	#card {
+		width: 100%;
+	}
+	.liste_input {
+		width: 100%;
+	}
+	.liste_informations {
+		width: 50%;
+	}
+}
 
 @media (max-width: 700px) {
 	header {
@@ -141,5 +162,41 @@ h4:hover {
 		align-items: center;
 		justify-content: center;
 		margin-top: 10px;
+	}
+	.buttons {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	button {
+		border: black;
+		width: 50%;
+		height: 50px;
+		margin-top: 10px;
+		background-color: #151515;
+	}
+	.informations {
+		width: 100%;
+	}
+	.liste_input {
+		width: 100%;
+	}
+	.liste_informations {
+		width: 50%;
+	}
+	h2 {
+		margin: 20px 5px;
+	}
+	#card {
+		padding: 2px;
+	}
+}
+
+@media (max-width: 359px) {
+	h2 {
+		font-size: 15px;
+		margin: 23px 0;
 	}
 }

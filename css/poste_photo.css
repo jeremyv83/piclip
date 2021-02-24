@@ -57,6 +57,26 @@ h1 {
 	color: #151515;
 	font-size: medium;
 }
+::placeholder {
+	color: #fff;
+	padding-left: 5px;
+}
+.label-file {
+	cursor: pointer;
+	color: #2a2a2a;
+	font-weight: bold;
+}
+.label-file:hover {
+	color: #25a5c4;
+}
+
+/* et on masque le input*/
+.input-file {
+	display: none;
+}
+input {
+	border: none;
+}
 
 #titre {
 	width: 50%;
@@ -84,7 +104,7 @@ h1 {
 }
 #valider:hover {
 	background: #ffffff;
-	color: #2a2a2ab7;
+	color: #151515;
 	border: 2px solid #2a2a2ab7;
 	transition: all 0.3s;
 	box-shadow: 0 0 10px #2a2a2ab7;
@@ -124,6 +144,23 @@ h4:hover {
 	text-decoration: underline;
 }
 
+@media (max-width: 1000px) {
+	header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: 10px;
+	}
+	.card {
+		width: 80%;
+		padding: 1em 0.5em;
+	}
+	body {
+		margin: 10px 10px;
+	}
+}
+
 @media (max-width: 700px) {
 	header {
 		display: flex;
@@ -131,5 +168,32 @@ h4:hover {
 		align-items: center;
 		justify-content: center;
 		margin-top: 10px;
+	}
+	.card {
+		width: 100%;
+		padding: 1em 0.5em;
+	}
+	body {
+		margin: 10px 10px;
+	}
+	footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 2em;
+		height: auto;
+	}
+	.block1 {
+		text-align: center;
+	}
+	.block2 {
+		text-align: center;
+	}
+	.block3 {
+		text-align: center;
+	}
+	.block4 {
+		text-align: center;
 	}
 }
