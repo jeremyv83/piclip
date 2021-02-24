@@ -34,7 +34,7 @@
 		</div>
 		<footer>
 			<div class="block1">
-				<h4>Conditions d'utilisation</h4>
+				<h4><a href="../cg/cg.php">Conditions d'utilisation</h4>
 				<h4 href="../home/home.php">Home</h4>
 				<h4 href="../galerie/galerie.php">Galerie</h4>
 			</div>

@@ -2,7 +2,7 @@
 	session_start();
 	if(isset($_SESSION["id"])) {
 		$id_user = $_SESSION["id"];
-	}else header("Location: ../login/se_connecter.php");
+	}
 ?>
 
 <!DOCTYPE html>
@@ -161,7 +161,7 @@
 		</div>
 		<footer>
 			<div class="block1">
-				<h4>Conditions d'utilisation</h4>
+				<h4><a href="../cg/cg.php">Conditions d'utilisation</h4>
 				<h4><a href="../home/home.php">Home</a></h4>
 				<h4><a href="../galerie/galerie.php">Galerie</a></h4>
 			</div>
