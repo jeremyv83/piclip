@@ -29,7 +29,7 @@ if(isset($_POST['submit'])) {
         $file_dest = '../poste/image/'.$file_name;
        
         // Pour afficher la taille maximal accepter par le php.ini, il se trouve à wamp64/bin/php/
-        //echo ini_get('upload_max_filesize'); 
+        // echo ini_get('upload_max_filesize'); 
     
         if(in_array($file_extension, $extension_autorise)){
             if(move_uploaded_file($file_tmp_name, $file_dest)){

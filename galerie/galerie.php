@@ -1,3 +1,11 @@
+<?php
+	session_start();
+	if(isset($_SESSION["id"])) {
+		$id_user = $_SESSION["id"];
+	}else header("Location: ../login/se_connecter.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -8,20 +16,19 @@
 		<title>Galerie</title>
 	</head>
 	<body>
-		<header>
-			<a href="../bienvenue/bienvenue.html"
-				><img src="../img/Plan de travail 6.png" alt=""
-			/></a>
-			<a href="../home/home.html">Home</a>
-			<a href="../galerie/galerie.html">Galerie</a>
-			<a href="">Se déconnecter</a>
+		<?php include("../navbar/navbar.php"); ?>
+		<!--<header>
+			<img src="../img/Plan de travail 6.png" alt="" />
+			<a href="">Home</a>
+			<a href="">Galerie</a>
+			<a href="">Se connecter</a>
 			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
-		</header>
+		</header>-->
 		<div class="container">
-			<a href="../galerie_photos/galerie_photos.html"
+			<a href="../galerie_photos/galerie_photos.php"
 				><span>Galerie Photos</span></a
 			>
-			<a href="../galerie_videos/galerie_videos.html"
+			<a href="../galerie_videos/galerie_videos.php"
 				><span>Galerie Vidéos</span></a
 			>
 		</div>

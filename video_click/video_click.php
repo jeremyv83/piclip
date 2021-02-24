@@ -13,13 +13,15 @@
 		<title>Vidéo</title>
 	</head>
 	<body>
-		<header>
+	
+		<?php include("../navbar/navbar.php"); ?>
+		<!--<header>
 			<img src="../img/Plan de travail 6.png" alt="" />
 			<a href="">Home</a>
 			<a href="">Galerie</a>
 			<a href="">Se connecter</a>
 			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
-		</header>
+		</header>-->
 
 		<h1>Vidéo</h1>
 		<div class="photos">
@@ -43,8 +45,8 @@
 		<footer>
 			<div class="block1">
 				<h4>Conditions d'utilisation</h4>
-				<h4><a href="../home/home.html">Home</a></h4>
-				<h4><a href="../galerie/galerie.html">Galerie</a></h4>
+				<h4><a href="../home/home.php">Home</a></h4>
+				<h4><a href="../galerie/galerie.php">Galerie</a></h4>
 			</div>
 			<div class="block2">
 				<h4>Politique de confidentialité</h4>
@@ -61,7 +63,7 @@
 			</div>
 			<div class="block4">
 				<h4>A propos</h4>
-				<a href="../bienvenue/bienvenue.html"
+				<a href="../bienvenue/bienvenue.php"
 					><img src="../img/Plan de travail 16.png" alt=""
 				/></a>
 			</div>

@@ -19,15 +19,14 @@ include("traitement.php");
 		<title>Piclip - Se connecter</title>
 	</head>
 	<body>
-		<header>
-		<a href="../bienvenue/bienvenue.html"
-				><img src="../img/Plan de travail 6.png" alt=""
-			/></a>
-			<a href="../home/home.html">Home</a>
-			<a href="../galerie/galerie.html">Galerie</a>
-			<a href="../login/se_connecter.php">Se connecter</a>
+	<?php include("../navbar/navbar.php"); ?>
+		<!--<header>
+			<img src="../img/Plan de travail 6.png" alt="" />
+			<a href="">Home</a>
+			<a href="">Galerie</a>
+			<a href="">Se connecter</a>
 			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
-		</header>
+		</header>-->
 		<div id="card">
 			<h1>Se connecter à</h1>
 			<img src="../img/Plan de travail 16.png" id="logogris" alt="" />
@@ -60,13 +59,17 @@ include("traitement.php");
 		<footer>
 			<div class="block1">
 				<h4>Conditions d'utilisation</h4>
-				<h4>Home</h4>
-				<h4>Galerie</h4>
+				<h4><a href="../home/home.php">Home</a></h4>
+				<h4><a href="../galerie/galerie.php">Galerie</a></h4>
 			</div>
 			<div class="block2">
 				<h4>Politique de confidentialité</h4>
-				<h4>Se connecter</h4>
-				<h4>S'inscrire</h4>
+				<h4><a href="../login/se_connecter.php">Se connecter</a></h4>
+				<h4>
+					<a href="../inscription/formulaire_inscription.php">
+						S'inscrire</a
+					>
+				</h4>
 			</div>
 			<div class="block3">
 				<h4>Aide</h4>
@@ -74,7 +77,9 @@ include("traitement.php");
 			</div>
 			<div class="block4">
 				<h4>A propos</h4>
-				<img src="../img/Plan de travail 16.png" alt="" />
+				<a href="../bienvenue/bienvenue.php"
+					><img src="../img/Plan de travail 16.png" alt=""
+				/></a>
 			</div>
 		</footer>
 	</body>
