@@ -6,11 +6,19 @@ if(isset($_SESSION["id"])) {
     $id_user = $_SESSION["id"];
 }else header("Location: ../login/se_connecter.php");
 
+$RecupPseudo = $bdd->query("SELECT * FROM users WHERE id_user = '$id_user'");
+$UserData = $RecupPseudo->fetch();
+$pseudo = $UserData['pseudo'];
+
+
+
+
 if(isset($_POST['submit'])) {
 
+    date_default_timezone_set('Europe/Paris');
     $titre = $_POST['titre'];
     $description = $_POST['description'];
-    $date_poste = date('y-m-d');
+    $date_poste = date('Y-m-d H:i:s');
 
 
     if(!empty($_FILES)){
@@ -40,20 +48,7 @@ if(isset($_POST['submit'])) {
     }
 }
 
-    if(isset($_POST["previsu"])){
-        var_dump($_FILES);
-    }
-// if(isset($_POST["image"])){
-//     // $file_name = $_FILES['image']['name'];
-//     // $file_extension = strrchr($file_name, ".");
-//      $file_tmp_name = $_FILES['image']['tmp_name'];
-//     // $extension_autorise = array('.jpg', '.JPG', '.png', '.PNG');
-//     // $file_dest = '../poste/image/'.$file_name;
-//     // if(in_array($file_extension, $extension_autorise)){
 
-//     // }
-//     echo $file_tmp_name;
-// }
 
 
 ?>
