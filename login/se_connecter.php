@@ -43,7 +43,7 @@ include("traitement.php");
 
 					<h2>Mot de passe:</h2>
 				</div>
-				<form action="#" method="POST">
+				<form action="#" method="POST" class="liste_input_up">
 					<div class="liste_input">
 						<input type="text" name="email"/>
 						<input type="password" name="motdepasse" />
@@ -56,7 +56,7 @@ include("traitement.php");
 				</form>
 			<div class="mdpOublie">Mot de passe oublié ?</div>
 		</div>
-		<footer>
+		<!--<footer>
 			<div class="block1">
 				<h4>Conditions d'utilisation</h4>
 				<h4><a href="../home/home.php">Home</a></h4>
@@ -81,6 +81,6 @@ include("traitement.php");
 					><img src="../img/Plan de travail 16.png" alt=""
 				/></a>
 			</div>
-		</footer>
+		</footer>-->
 	</body>
 </html>

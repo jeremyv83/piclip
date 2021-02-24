@@ -109,7 +109,7 @@ include("traitement.php");
                                 <div class="imgavatar">
                                     <img id="avatar" src = "<?php echo $avatar ?>"> 
                                     <label for="file" class="label-file">Modifier l'avatar...</label>
-		                            <input id="file" class="input-file" type="file" />
+		                            <input id="file" class="input-file" type="file" name="image"/>
                                     <button type="submit" id="submit" name="new_avatar">Valider l'avatar</button>
                                 </div>
                             </div>
