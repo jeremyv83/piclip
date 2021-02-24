@@ -1,8 +1,9 @@
 <?php
-	session_start();
-	if(isset($_SESSION["id"])) {
-		$id_user = $_SESSION["id"];
-	}else header("Location: ../login/se_connecter.php");
+session_start();
+if(isset($_SESSION["id"])) {
+    $id_user = $_SESSION["id"];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -75,50 +76,13 @@
 
 		<h1>Dernières photos</h1>
 		<div class="dernieres_photos">
-			<div class="card">
-				<img src="../img/1.jpg" alt="" />
-				<h3 class="titre">Titre</h3>
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					Fugiat nulla repellat maiores delectus assumenda vel placeat
-					illum beatae quos? Quam laudantium, quo inventore quas vel
-					aliquid officiis et doloribus consectetur?
-				</p>
-			</div>
-			<div class="card">
-				<img src="../img/2.jpg" alt="" />
-				<h3 class="titre">Titre</h3>
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					Fugiat nulla repellat maiores delectus assumenda vel placeat
-					illum beatae quos? Quam laudantium, quo inventore quas vel
-					aliquid officiis et doloribus consectetur?
-				</p>
-			</div>
-			<div class="card">
-				<img src="../img/3.jpg" alt="" />
-				<h3 class="titre">Titre</h3>
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					Fugiat nulla repellat maiores delectus assumenda vel placeat
-					illum beatae quos? Quam laudantium, quo inventore quas vel
-					aliquid officiis et doloribus consectetur?
-				</p>
-			</div>
-			<div class="card">
-				<img src="../img/4.jpg" alt="" />
-				<h3 class="titre">Titre</h3>
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					Fugiat nulla repellat maiores delectus assumenda vel placeat
-					illum beatae quos? Quam laudantium, quo inventore quas vel
-					aliquid officiis et doloribus consectetur?
-				</p>
-			</div>
+			<?php include("derniere_photo.php") ?>
 		</div>
 		<h1>Dernières vidéos</h1>
 		<div class="dernieres_photos">
-			<div class="card">
+		<?php include("derniere_video.php") ?>
+		</div>
+			<!--<div class="card">
 				<img src="../img/1.jpg" alt="" />
 				<h3 class="titre">Titre</h3>
 				<p>
@@ -157,8 +121,8 @@
 					illum beatae quos? Quam laudantium, quo inventore quas vel
 					aliquid officiis et doloribus consectetur?
 				</p>
-			</div>
-		</div>
+			</div> 
+		</div>-->
 		<footer>
 			<div class="block1">
 				<h4>Conditions d'utilisation</h4>

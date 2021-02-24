@@ -54,8 +54,10 @@ include("traitement.php");
                 <div class="poste">
                     <a href="../poste_photo/poste_photo.php">
                         <img src="../img/postephotos.png" alt="Cliques ici pour poster de nouvelles photos!" />
-                    </a>    
-                    <img src="../img/postevideos.png" alt="Cliques ici pour poster de nouvelles vidéos!" />
+                    </a>
+                    <a href="../poste_video/poste_video.php">    
+                        <img src="../img/postevideos.png" alt="Cliques ici pour poster de nouvelles vidéos!" />
+                    </a>
                 </div>
                 <footer>
 			<div class="block1">
