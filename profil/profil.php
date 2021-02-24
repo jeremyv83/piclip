@@ -52,7 +52,9 @@ include("traitement.php");
 			                    <a href="../poste_video/poste_video.php"><span>Mes Vidéos</span></a>
 		                    </div>
                 <div class="poste">
-                    <img src="../img/postephotos.png" alt="Cliques ici pour poster de nouvelles photos!" />    
+                    <a href="../poste_photo/poste_photo.php">
+                        <img src="../img/postephotos.png" alt="Cliques ici pour poster de nouvelles photos!" />
+                    </a>    
                     <img src="../img/postevideos.png" alt="Cliques ici pour poster de nouvelles vidéos!" />
                 </div>
                 <footer>

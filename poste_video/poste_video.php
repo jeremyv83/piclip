@@ -1,48 +1,72 @@
 <?php
-require("traitement.php");
-
+require("traitement.php")
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<?php include("../navbar/navbar.php"); ?>
-		<!--<header>
-			<img src="../img/Plan de travail 6.png" alt="" />
-			<a href="">Home</a>
-			<a href="">Galerie</a>
-			<a href="">Se connecter</a>
-			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
-		</header>-->
-    <form method="POST" enctype="multipart/form-data">
-        <p>Mettre la video : </p>
-        <input type="file" name="video"/>
-        <br>
-        <p>Mettre la mignature de la video : </p>
-        <input type="file" name="minia"/>
-        <br>
-        <input type="text" name="titre" placeholder="Le titre..">
-        <input type="text" name="description" placeholder="La description..">
-        <input type="submit" id="submit" name="submit" value="Envoyer">
-    </form>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/poste_video.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+			rel="stylesheet"
+		/>
+		<title>poste video</title>
+	</head>
+	<body>
+    <?php include("../navbar/navbar.php"); ?>
 
-    <?php
-    if(!empty($_FILES)){
-        ?>
-        <video poster="<?php echo $file_dest_minia?>" width="500" height="500" controls="controls">
-            <source src="<?php echo $file_dest_video ?>" type="video/mp4" />
-        </video>
-        <video poster="<?php echo $file_dest_minia?>" width="500" height="500" controls="controls">
-            <source src="<?php echo $file_dest_video ?>" type="video/mp4" />
-        </video>
-    <?php
-    } 
-    ?>
-</body>
+		<h1>Poste des vidéos</h1>
+		<div class="photos">
+			<div class="card">
+				<form method="POST" enctype="multipart/form-data">
+				<div class="ajoute">
+					<label for="video">Ajout d'une vidéo..</label>
+					<input type="file" name="video"/>
+					<label for="minia">Ajout d'une vidéo..</label>
+					<input type="file" name="minia"/>
+
+				</div>
+				<div class="parcourir"><?php if(!empty($_FILES)){
+						echo '<img src="'.$file_dest_minia.'"/>';
+					} ?></div>
+				<input type="text" id="titre" name="titre" placeholder="Titre" />
+				<h2 class="pseudo">@<?php echo $pseudo; ?></h2>
+				<textarea
+					placeholder="Description"
+					name="description"
+					id="description"
+					cols="62"
+					rows="10"
+					name="description"
+				></textarea>
+				<button type="submit" id="valider" name="submit">Valider le post</button>
+			</form>
+			</div>
+		</div>
+
+		<footer>
+			<div class="block1">
+				<h4>Conditions d'utilisation</h4>
+				<h4>Home</h4>
+				<h4>Galerie</h4>
+			</div>
+			<div class="block2">
+				<h4>Politique de confidentialité</h4>
+				<h4>Se connecter</h4>
+				<h4>S'inscrire</h4>
+			</div>
+			<div class="block3">
+				<h4>Aide</h4>
+				<h4>Utilisateurs</h4>
+			</div>
+			<div class="block4">
+				<h4>A propos</h4>
+				<img src="../img/Plan de travail 16.png" alt="" />
+			</div>
+		</footer>
+	</body>
 </html>

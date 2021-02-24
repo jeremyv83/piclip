@@ -19,7 +19,7 @@ require("traitement.php");
 		<title>poste photo</title>
 	</head>
 	<body>
-		<?php include("../navbar/navBar.php"); ?>
+		<?php include("../navbar/navbar.php"); ?>
 		<!--<header>
 			<img src="../img/Plan de travail 6.png" alt="" />
 			<a href="">Home</a>
@@ -32,13 +32,13 @@ require("traitement.php");
 		<div class="photos">
 			<div class="card">
 				<form method="POST" enctype="multipart/form-data">
-					<div class="parcourir"><img src="<?php if($_FILES){
-						echo $file_dest;
-					} ?>"/></div>
+					<div class="parcourir"><?php if(!empty($_FILES)){
+						echo '<img src="'.$file_dest.'"/>';
+					} ?></div>
 					<input type="file" name="image"/>
 					<input type="text" id="titre" name="titre" placeholder="Titre" />
 					
-					<h2 class="pseudo">@pseudo</h2>
+					<h2 class="pseudo">@<?php echo $pseudo; ?></h2>
 					<textarea
 						placeholder="Description"
 						name="description"

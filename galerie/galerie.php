@@ -32,6 +32,7 @@
 				><span>Galerie Vidéos</span></a
 			>
 		</div>
+<<<<<<< HEAD
 		<footer>
 			<div class="block1">
 				<h4><a href="../cg/cg.php">Conditions d'utilisation</h4>
@@ -54,5 +55,8 @@
 				<img src="../img/Plan de travail 16.png" alt="" />
 			</div>
 		</footer>
+=======
+		
+>>>>>>> origin/Jeremy
 	</body>
 </html>

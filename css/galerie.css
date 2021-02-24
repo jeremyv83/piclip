@@ -122,6 +122,8 @@ header a:hover {
 	transition-delay: 0s, 0.5s, 1s, 1s;
 }
 
+
+
 @media (max-width: 700px) {
 	header {
 		display: flex;
