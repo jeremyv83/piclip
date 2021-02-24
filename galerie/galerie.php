@@ -32,31 +32,6 @@
 				><span>Galerie Vidéos</span></a
 			>
 		</div>
-<<<<<<< HEAD
-		<footer>
-			<div class="block1">
-				<h4><a href="../cg/cg.php">Conditions d'utilisation</h4>
-				<h4 href="../home/home.php">Home</h4>
-				<h4 href="../galerie/galerie.php">Galerie</h4>
-			</div>
-			<div class="block2">
-				<h4>Politique de confidentialité</h4>
-				<h4 href="../login/se_connecter.php">Se connecter</h4>
-				<h4 href="../inscription/formulaire_inscription.php">
-					S'inscrire
-				</h4>
-			</div>
-			<div class="block3">
-				<h4>Aide</h4>
-				<h4>Utilisateurs</h4>
-			</div>
-			<div class="block4">
-				<h4>A propos</h4>
-				<img src="../img/Plan de travail 16.png" alt="" />
-			</div>
-		</footer>
-=======
 		
->>>>>>> origin/Jeremy
 	</body>
 </html>
