@@ -25,7 +25,7 @@
 			<a href="">Se connecter</a>
 			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
 		</header>-->
-		<div id="card">
+		<div class="card">
 			<h1>S'inscrire sur</h1>
 			<img src="../img/Plan de travail 16.png" id="logogris" alt="" />
 			<?php 
@@ -36,25 +36,36 @@
 
             } ?>
 			<div class="informations">
-				<div class="liste_informations">
-					<h2>Pseudo:</h2>
-
-					<h2>Adresse email:</h2>
-					<h2>Confirmez votre adresse email:</h2>
-					<h2>Mot de passe:</h2>
-					<h2>Confirmez votre mot de passe:</h2>
-					<h2>Date de naissance</h2>
-					<h2>Acceptez les conditions d'utilisation Piclip:</h2>
-				</div>
 				<form method="POST">
 					<div class="liste_input">
-						<input type="text" name="pseudo" />
+						<div class="line">
+							<h2>Pseudo:</h2>
+							<input type="text" name="pseudo" />
+						</div>
+						<div class="line">
+						<h2>Adresse email:</h2>
 						<input type="email" name="email"/>
+						</div>
+						<div class="line">
+						<h2>Confirmez votre adresse email:</h2>
 						<input type="email" name="verifemail"/>
+						</div>
+						<div class="line">
+						<h2>Mot de passe:</h2>
 						<input type="password" name="motdepasse" />
+						</div>
+						<div class="line">
+						<h2>Confirmez votre mot de passe:</h2>
 						<input type="password" name="verifmdp"/>
+						</div>
+						<div class="line">
+						<h2>Date de naissance</h2>
 						<input type="date" name="datenaissance" pattern="(^(((0[1-9]|1[0-9]|2[0-8])[/](0[1-9]|1[012]))|((29|30|31)[/](0[13578]|1[02]))|((29|30)[/](0[4,6,9]|11)))[/](19|[2-9][0-9])\d\d$)|(^29[/]02[/](19|[2-9][0-9])(00|04|08|12|16|20|24|28|32|36|40|44|48|52|56|60|64|68|72|76|80|84|88|92|96)$)"/>
+						</div>
+						<div class="line">
+						<h2>Acceptez les conditions d'utilisation Piclip:</h2>
 						<input type="checkbox" id="check" />
+						</div>
 					</div>
 					<div class="buttons">
 						<button>Annuler</button>
@@ -63,7 +74,7 @@
 				</form>
 			</div>
 		</div>
-		<footer>
+		<!--<footer>
 			<div class="block1">
 				<h4>Conditions d'utilisation</h4>
 				<h4><a href="../home/home.php">Home</a></h4>
@@ -88,6 +99,6 @@
 					><img src="../img/Plan de travail 16.png" alt=""
 				/></a>
 			</div>
-		</footer>
+		</footer>-->
 	</body>
 </html>

@@ -24,7 +24,7 @@
 				><span>Galerie Vidéos</span></a
 			>
 		</div>
-		<footer>
+		<!--<footer>
 			<div class="block1">
 				<h4>Conditions d'utilisation</h4>
 				<h4 href="../home/home.php">Home</h4>
@@ -45,6 +45,6 @@
 				<h4>A propos</h4>
 				<img src="../img/Plan de travail 16.png" alt="" />
 			</div>
-		</footer>
+		</footer>-->
 	</body>
 </html>

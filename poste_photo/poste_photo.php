@@ -35,7 +35,9 @@ require("traitement.php");
 					<div class="parcourir"><img src="<?php if($_FILES){
 						echo $file_dest;
 					} ?>"/></div>
-					<input type="file" name="image"/>
+					<label for="file" class="label-file">Choisir une image...</label>
+					<input id="file" class="input-file" type="file" />
+					<br>
 					<input type="text" id="titre" name="titre" placeholder="Titre" />
 					
 					<h2 class="pseudo">@pseudo</h2>
