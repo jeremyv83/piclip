@@ -70,6 +70,7 @@ header img {
 	line-height: 0;
 	height: 300px;
 }
+
 #slides .slide {
 	width: 25%;
 	float: left;
@@ -168,12 +169,17 @@ h1 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
+	align-items: center;
 }
 .card {
 	background-color: #2a2a2a;
 	margin: 10px;
 	padding: 10px;
 	transition-duration: 1s;
+	align-items: center;
+	flex: 0 0 auto;
+	width: 25%;
+	height: 100%;
 }
 .card:hover {
 	background-color: #ffffff;
@@ -191,7 +197,7 @@ h1 {
 }
 
 .card img {
-	width: 100%; 
+	width: 100%;
 }
 .titre {
 	margin: 5px;
@@ -234,6 +240,24 @@ h4:hover {
 	text-decoration: underline;
 }
 
+@media (max-width: 900px) {
+	.dernieres_photos {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.card {
+		background-color: #2a2a2a;
+		margin: 10px;
+		padding: 10px;
+		transition-duration: 1s;
+		align-items: center;
+		flex: 0 0 auto;
+		width: 80%;
+		height: 100%;
+	}
+}
 @media (max-width: 700px) {
 	header {
 		display: flex;
@@ -241,5 +265,64 @@ h4:hover {
 		align-items: center;
 		justify-content: center;
 		margin-top: 10px;
+	}
+	body {
+		margin: 10px 10px;
+	}
+	footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 2em;
+		height: auto;
+	}
+	.block1 {
+		text-align: center;
+	}
+	.block2 {
+		text-align: center;
+	}
+	.block3 {
+		text-align: center;
+	}
+	.block4 {
+		text-align: center;
+	}
+}
+
+@media (max-width: 550px) {
+	.dernieres_photos {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.card {
+		background-color: #2a2a2a;
+		margin: 10px;
+		padding: 10px;
+		transition-duration: 1s;
+		align-items: center;
+
+		width: 100%;
+	}
+	body {
+		margin: 10px 10px;
+	}
+	.card:hover {
+		background-color: #ffffff;
+		color: #151515;
+		margin: 10px;
+		padding: 10px;
+		transition: all 0.5s;
+		box-shadow: 0 0 1em #fff;
+		transform: scale(1);
+		z-index: 1;
+	}
+}
+@media (max-width: 460px) {
+	#slider {
+		display: none;
 	}
 }
