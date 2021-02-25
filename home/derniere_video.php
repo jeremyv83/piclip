@@ -16,9 +16,9 @@ $sql->execute();
     for ($i = 0; $i < 4; $i++) {
         $date = $sql->fetch();
         echo '<div class="card">
-                <img src="'.$date['route_video'].'"/>
+                <img src="'.$date['route_minia'].'"/>
                 <h3 class="titre">'.$date['titre'].'</h3>
-                <p maxlenght="10">
+                <p>
                     '.$date['description'].'
                 </p>
             </div>';

@@ -1,4 +1,5 @@
 <?php
+
 require("../baseDeDonnee.php");
 
 
@@ -18,7 +19,7 @@ $sql->execute();
         echo '<div class="card">
                 <img src="'.$date['route_image'].'"/>
                 <h3 class="titre">'.$date['titre'].'</h3>
-                <p maxlenght="10">
+                <p>
                     '.$date['description'].'
                 </p>
             </div>';

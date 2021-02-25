@@ -80,7 +80,7 @@ if(isset($_SESSION["id"])) {
 		</div>
 		<h1>Dernières vidéos</h1>
 		<div class="dernieres_photos">
-		<?php include("derniere_video.php") ?>
+			<?php include("derniere_video.php") ?>
 		</div>
 			<!--<div class="card">
 				<img src="../img/1.jpg" alt="" />
