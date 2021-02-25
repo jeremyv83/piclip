@@ -170,15 +170,20 @@ button:hover {
 	transition-delay: 0s, 0.5s, 1s, 1s;
 }
 
-.poste img {
-}
-
 .poste {
 	width: 70%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	margin: 20px auto;
+}
+.poste img {
+	transition: 1s;
+}
+.poste img:hover {
+	box-shadow: 0 0 50px #fff;
+	transform: scale(1.2);
+	z-index: 1;
 }
 
 header a {
@@ -219,6 +224,32 @@ h4:hover {
 	text-decoration: underline;
 }
 
+@media (max-width: 1529px) {
+	.poste {
+		width: 70%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 20px auto;
+	}
+	.poste img {
+		margin-bottom: 20px;
+	}
+}
+@media (max-width: 914px) {
+	.infoavatar {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 0 10%;
+	}
+	.informationsdeprofil {
+		width: 100%;
+		margin: 10px auto;
+	}
+}
 @media (max-width: 700px) {
 	header {
 		display: flex;
@@ -226,5 +257,38 @@ h4:hover {
 		align-items: center;
 		justify-content: center;
 		margin-top: 10px;
+	}
+	.buttonsphotovideos {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	body {
+		margin: 10px 10px;
+	}
+	.poste img {
+		transform: scale(0.8);
+	}
+	footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 2em;
+		height: auto;
+	}
+	.block1 {
+		text-align: center;
+	}
+	.block2 {
+		text-align: center;
+	}
+	.block3 {
+		text-align: center;
+	}
+	.block4 {
+		text-align: center;
 	}
 }

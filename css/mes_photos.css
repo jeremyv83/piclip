@@ -59,6 +59,8 @@ h1 {
 .card:hover p,
 .card:hover h3 {
 	color: #151515;
+	/*transition-duration: 0.5s;*/
+	/*transition-delay: 0.5s;*/
 }
 .titre {
 	margin: 0.5em 0;

@@ -55,8 +55,8 @@ include("traitement.php");
                         </form>
                 </div>
                 <div class="buttonsphotovideos">
-			                    <a href="../poste_photo/poste_photo.php"><span>Mes Photos</span></a>
-			                    <a href="../poste_video/poste_video.php"><span>Mes Vidéos</span></a>
+			                    <a href="../mes_photos/mes_photos.php"><span>Mes Photos</span></a>
+			                    <a href="../mes_videos/mes_videos.php"><span>Mes Vidéos</span></a>
 		                    </div>
                 <div class="poste">
                     <a href="../poste_photo/poste_photo.php">

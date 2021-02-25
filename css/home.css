@@ -70,6 +70,7 @@ header img {
 	line-height: 0;
 	height: 300px;
 }
+
 #slides .slide {
 	width: 25%;
 	float: left;
@@ -117,10 +118,10 @@ header img {
 	margin: 0 -50px 0 0;
 	display: block;
 }
-#slide1:checked ~ #controls label:nth-last-child(2),
-#slide2:checked ~ #controls label:nth-last-child(3),
-#slide3:checked ~ #controls label:nth-last-child(4),
-#slide4:checked ~ #controls label:nth-last-child(1) {
+#slide1:checked ~ #controls label:nth-last-child(1),
+#slide2:checked ~ #controls label:nth-last-child(4),
+#slide3:checked ~ #controls label:nth-last-child(3),
+#slide4:checked ~ #controls label:nth-last-child(2) {
 	background: url(../img/130882.svg) no-repeat;
 	float: left;
 	margin: 0 0 0 -50px;
@@ -175,6 +176,7 @@ h1 {
 	margin: 10px;
 	padding: 10px;
 	transition-duration: 1s;
+	align-items: center;
 	flex: 0 0 auto;
 	width: 25%;
 	height: 100%;
@@ -195,7 +197,7 @@ h1 {
 }
 
 .card img {
-	width: 100%; 
+	width: 100%;
 }
 .titre {
 	margin: 5px;
@@ -238,6 +240,24 @@ h4:hover {
 	text-decoration: underline;
 }
 
+@media (max-width: 900px) {
+	.dernieres_photos {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.card {
+		background-color: #2a2a2a;
+		margin: 10px;
+		padding: 10px;
+		transition-duration: 1s;
+		align-items: center;
+		flex: 0 0 auto;
+		width: 80%;
+		height: 100%;
+	}
+}
 @media (max-width: 700px) {
 	header {
 		display: flex;
@@ -245,5 +265,64 @@ h4:hover {
 		align-items: center;
 		justify-content: center;
 		margin-top: 10px;
+	}
+	body {
+		margin: 10px 10px;
+	}
+	footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 2em;
+		height: auto;
+	}
+	.block1 {
+		text-align: center;
+	}
+	.block2 {
+		text-align: center;
+	}
+	.block3 {
+		text-align: center;
+	}
+	.block4 {
+		text-align: center;
+	}
+}
+
+@media (max-width: 550px) {
+	.dernieres_photos {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.card {
+		background-color: #2a2a2a;
+		margin: 10px;
+		padding: 10px;
+		transition-duration: 1s;
+		align-items: center;
+
+		width: 100%;
+	}
+	body {
+		margin: 10px 10px;
+	}
+	.card:hover {
+		background-color: #ffffff;
+		color: #151515;
+		margin: 10px;
+		padding: 10px;
+		transition: all 0.5s;
+		box-shadow: 0 0 1em #fff;
+		transform: scale(1);
+		z-index: 1;
+	}
+}
+@media (max-width: 460px) {
+	#slider {
+		display: none;
 	}
 }
