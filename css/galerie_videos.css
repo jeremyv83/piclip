@@ -24,7 +24,14 @@ header img {
 	width: 100px;
 	height: 56px;
 }
-
+.titre_pseudo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.pseudo {
+	margin: 5px;
+}
 h1 {
 	text-align: center;
 	text-decoration: underline;
@@ -36,6 +43,7 @@ h1 {
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-evenly;
+	align-items: center;
 }
 .card {
 	background-color: #2a2a2a;
@@ -43,6 +51,7 @@ h1 {
 	padding: 10px;
 	width: 22%;
 	transition-duration: 1s;
+	align-items: center;
 }
 .card:hover {
 	background-color: #ffffff;

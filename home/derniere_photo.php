@@ -18,7 +18,10 @@ $sql->execute();
         $date = $sql->fetch();
         echo '<div class="card">
                 <img src="'.$date['route_image'].'"/>
-                <h3 class="titre">'.$date['titre'].'</h3>
+                <div class="titre_pseudo">
+                    <h3 class="titre">'.$date['titre'].'</h3>
+                    <h3 class="pseudo">@pseudo</h3>
+                </div>
                 <p>
                     '.$date['description'].'
                 </p>

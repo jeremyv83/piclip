@@ -31,7 +31,7 @@
 					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 					Fugiat nulla repellat maiores delectus assumenda vel placeat
 					illum beatae quos? Quam laudantium, quo inventore quas vel
-					aliquid officiis et doloribus consectetur?
+					aliquid officiis et doloribus consectetur?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, nemo iure rerum soluta cumque explicabo neque! Autem modi, est dolore necessitatibus sunt accusamus fuga rerum velit repellat, aperiam id inventore!
 				</p>
 			</div>
 			<div class="card">

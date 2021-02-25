@@ -1,5 +1,12 @@
 <?php
+
+session_start();
+
 require("../baseDeDonnee.php");
+
+if(isset($_SESSION["id"])) {
+    $id_user = $_SESSION["id"];
+}else header("Location: ../login/se_connecter.php");
 
 
 
@@ -7,14 +14,9 @@ $requete = "SELECT * FROM video ORDER BY date_poste DESC";
 $sql = $bdd -> prepare($requete);
 $sql->execute();
 
-// while  ($date = $sql->fetch())
-//     {
-//         echo $date['titre'];
-//         echo "<br/>";
-//     }
 
-    for ($i = 0; $i < 4; $i++) {
-        $date = $sql->fetch();
+while($date = $sql->fetch())
+    {
         echo '<div class="card">
                 <img src="'.$date['route_minia'].'"/>
                 <div class="titre_pseudo">
