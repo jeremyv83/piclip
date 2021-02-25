@@ -24,7 +24,14 @@ header img {
 	width: 100px;
 	height: 56px;
 }
-
+.titre_pseudo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.pseudo {
+	margin: 5px;
+}
 h1 {
 	text-align: center;
 	text-decoration: underline;

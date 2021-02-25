@@ -4,7 +4,7 @@ require("../baseDeDonnee.php");
 
 
 
-$requete = "SELECT * FROM image ORDER BY date_poste DESC"; 
+$requete = "SELECT * FROM image INNER JOIN users ON image.id_user = users.id_user ORDER BY date_poste DESC"; 
 $sql = $bdd -> prepare($requete);
 $sql->execute();
 
@@ -18,7 +18,10 @@ $sql->execute();
         $date = $sql->fetch();
         echo '<div class="card">
                 <img src="'.$date['route_image'].'"/>
-                <h3 class="titre">'.$date['titre'].'</h3>
+                <div class="titre_pseudo">
+                    <h3 class="titre">'.$date['titre'].'</h3>
+                    <h3 class="pseudo">@'.$date['pseudo'].'</h3>
+                </div>
                 <p>
                     '.$date['description'].'
                 </p>

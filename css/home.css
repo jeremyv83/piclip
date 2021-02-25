@@ -199,6 +199,14 @@ h1 {
 .card img {
 	width: 100%;
 }
+.titre_pseudo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.pseudo {
+	margin: 5px;
+}
 .titre {
 	margin: 5px;
 }

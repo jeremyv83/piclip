@@ -13,7 +13,7 @@
 		<title>Galerie vidéos</title>
 	</head>
 	<body>
-		<?php include("../navbar/navBar.php"); ?>
+		<?php include("../navbar/navbar.php"); ?>
 		<!--<header>
 			<img src="../img/Plan de travail 6.png" alt="" />
 			<a href="">Home</a>
@@ -24,7 +24,8 @@
 
 		<h1>Vidéos</h1>
 		<div class="photos">
-			<div class="card">
+			<?php include("traitement.php") ?>
+			<!--<div class="card">
 				<img src="../img/1.jpg" alt="" />
 				<h3 class="titre">Titre</h3>
 				<p>
@@ -174,7 +175,7 @@
 					aliquid officiis et doloribus consectetur?
 				</p>
 			</div>
-		</div>
+		</div>-->
 
 		<footer>
 			<div class="block1">

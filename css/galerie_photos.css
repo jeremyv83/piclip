@@ -19,7 +19,14 @@ header {
 	justify-content: space-evenly;
 	margin-top: 10px;
 }
-
+.titre_pseudo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.pseudo {
+	margin: 5px;
+}
 header img {
 	width: 100px;
 	height: 56px;
