@@ -13,7 +13,7 @@
 		<title>Galerie vidéos</title>
 	</head>
 	<body>
-		<?php include("../navbar/navbar.php"); ?>
+		<?php include("../navbar/navBar.php"); ?>
 		<!--<header>
 			<img src="../img/Plan de travail 6.png" alt="" />
 			<a href="">Home</a>

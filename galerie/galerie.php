@@ -25,10 +25,10 @@
 			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
 		</header>-->
 		<div class="container">
-			<a href="../galerie_photos/galerie_photos.php"
+			<a href="galerie_photos/galerie_photos.php"
 				><span>Galerie Photos</span></a
 			>
-			<a href="../galerie_videos/galerie_videos.php"
+			<a href="galerie_videos/galerie_videos.php"
 				><span>Galerie Vidéos</span></a
 			>
 		</div>
