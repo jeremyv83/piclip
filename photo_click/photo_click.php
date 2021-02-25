@@ -24,21 +24,7 @@
 
 		<h1>Photos</h1>
 		<div class="photos">
-			<div class="card">
-				<img src="../img/1.jpg" alt="" />
-				<h3 class="titre">Titre</h3>
-				<h2 class="pseudo">@pseudo</h2>
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					Fugiat nulla repellat maiores delectus assumenda vel placeat
-					illum beatae quos? Quam laudantium, quo inventore quas vel
-					aliquid officiis et doloribus consectetur?Lorem ipsum, dolor
-					sit amet consectetur adipisicing elit. Fugiat nulla repellat
-					maiores delectus assumenda vel placeat illum beatae quos?
-					Quam laudantium, quo inventore quas vel aliquid officiis et
-					doloribus consectetur?
-				</p>
-			</div>
+			<?php include("traitement.php"); ?>
 		</div>
 
 		<footer>

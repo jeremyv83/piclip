@@ -183,7 +183,7 @@
 				<h4><a href="../galerie/galerie.php">Galerie</a></h4>
 			</div>
 			<div class="block2">
-				<h4>Politique de confidentialité</h4>
+			<h4><a href="../cg/cg.php">Conditions d'utilisation</h4>
 				<h4><a href="../login/se_connecter.php">Se connecter</a></h4>
 				<h4>
 					<a href="../inscription/formulaire_inscription.php">

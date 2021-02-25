@@ -125,7 +125,7 @@ if(isset($_SESSION["id"])) {
 		</div>-->
 		<footer>
 			<div class="block1">
-				<h4>Conditions d'utilisation</h4>
+			<h4><a href="../cg/cg.php">Conditions d'utilisation</h4>
 				<h4><a href="../home/home.php">Home</a></h4>
 				<h4><a href="../galerie/galerie.php">Galerie</a></h4>
 			</div>
@@ -143,7 +143,7 @@ if(isset($_SESSION["id"])) {
 				<h4>Utilisateurs</h4>
 			</div>
 			<div class="block4">
-				<h4>A propos</h4>
+				<h4><a href="../A_propos/A_propos.php">A propos</a></h4>
 				<a href="../bienvenue/bienvenue.php"
 					><img src="../img/Plan de travail 16.png" alt=""
 				/></a>

@@ -10,7 +10,7 @@ if(isset($_SESSION["id"])) {
 
 
 
-$requete = "SELECT * FROM image ORDER BY date_poste DESC"; 
+$requete = "SELECT * FROM image INNER JOIN users ON image.id_user = users.id_user ORDER BY date_poste DESC"; 
 $sql = $bdd -> prepare($requete);
 $sql->execute();
 
@@ -21,7 +21,7 @@ while($date = $sql->fetch())
                 <img src="'.$date['route_image'].'"/>
                 <div class="titre_pseudo">
                     <h3 class="titre">'.$date['titre'].'</h3>
-                    <h3 class="pseudo">@pseudo</h3>
+                    <h3 class="pseudo">@'.$date['pseudo'].'</h3>
                 </div>
                 <p>
                     '.$date['description'].'

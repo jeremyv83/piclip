@@ -19,7 +19,14 @@ header {
 	justify-content: space-evenly;
 	margin-top: 10px;
 }
-
+.titre_pseudo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.pseudo {
+	margin: 5px;
+}
 header img {
 	width: 100px;
 	height: 56px;
@@ -43,6 +50,7 @@ h1 {
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-evenly;
+	align-items: center;
 }
 .card {
 	background-color: #2a2a2a;
