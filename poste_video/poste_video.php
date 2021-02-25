@@ -14,7 +14,7 @@ require("traitement.php")
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
 			rel="stylesheet"
 		/>
-		<title>poste video</title>
+		<title>Piclip - Poste vidéo</title>
 	</head>
 	<body>
     <?php include("../navbar/navbar.php"); ?>
@@ -28,9 +28,16 @@ require("traitement.php")
 					<input type="file" name="video"/>
 					<label for="minia">Ajout d'une vidéo..</label>
 					<input type="file" name="minia"/>
-
+					
 				</div>
-				<div class="parcourir"><?php if(!empty($_FILES)){
+				<?php 
+            		// afficher le(s) message(s) d'erreur(s)
+            		if(isset($_POST['submit']) AND isset($error_choix)){ 
+                	?> <p style="color:#FF0000;margin-left:230px;"><?php echo $error_choix; ?></p>
+                	<?php  
+
+            		} ?>
+				<div class="parcourir"><?php if(isset($file_dest_minia)){
 						echo '<img src="'.$file_dest_minia.'"/>';
 					} ?></div>
 				<input type="text" id="titre" name="titre" placeholder="Titre" />
@@ -43,6 +50,13 @@ require("traitement.php")
 					rows="10"
 					name="description"
 				></textarea>
+				<?php 
+            	// afficher le(s) message(s) d'erreur(s)
+            	if(isset($_POST['submit']) AND isset($return)){ 
+                ?> <p style="color:#FF0000;margin-left:230px;"><?php echo $return; ?></p>
+                <?php  
+
+            } ?>
 				<button type="submit" id="valider" name="submit">Valider le post</button>
 			</form>
 			</div>

@@ -16,7 +16,7 @@ require("traitement.php");
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
 			rel="stylesheet"
 		/>
-		<title>poste photo</title>
+		<title>Piclip - Poste photo</title>
 	</head>
 	<body>
 		<?php include("../navbar/navbar.php"); ?>
@@ -31,11 +31,20 @@ require("traitement.php");
 		<h1>Poste des photos</h1>
 		<div class="photos">
 			<div class="card">
+			<?php 
+            	// afficher le(s) message(s) d'erreur(s)
+            	if(isset($_POST['submit']) AND isset($return)){ 
+                ?> <p style="color:#FF0000;margin-left:230px;"><?php echo $return; ?></p>
+                <?php  
+
+            } ?>
 				<form method="POST" enctype="multipart/form-data">
-					<div class="parcourir"><?php if(!empty($_FILES)){
-						echo '<img src="'.$file_dest.'"/>';
-					} ?></div>
-					<input type="file" name="image"/>
+					<div class="parcourir"><img src="<?php if($_FILES){
+						echo $file_dest;
+					} ?>"/></div>
+					<label for="file" class="label-file">Choisir une image...</label>
+					<input id="file" class="input-file" type="file" />
+					<br>
 					<input type="text" id="titre" name="titre" placeholder="Titre" />
 					
 					<h2 class="pseudo">@<?php echo $pseudo; ?></h2>

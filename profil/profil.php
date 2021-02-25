@@ -17,7 +17,14 @@ include("traitement.php");
     <title>Profil utilisateur</title>
 </head>
     <body>
-    <?php include("../navbar/navBar.php"); ?>
+    <?php include("../navbar/navbar.php"); ?>
+		<!--<header>
+			<img src="../img/Plan de travail 6.png" alt="" />
+			<a href="">Home</a>
+			<a href="">Galerie</a>
+			<a href="">Se connecter</a>
+			<a href="../inscription/formulaire_inscription.php">S'inscrire</a>
+		</header>-->
         
                 <h1>Profil de <?php echo $pseudo; ?></h1>
                 <div class="informationsdeprofil">   
@@ -54,11 +61,10 @@ include("traitement.php");
                 <div class="poste">
                     <a href="../poste_photo/poste_photo.php">
                         <img src="../img/postephotos.png" alt="Cliques ici pour poster de nouvelles photos!" />
-                    </a>    
-                    <a href="../poste_video/poste_video.php">
+                    </a>
+                    <a href="../poste_video/poste_video.php">    
                         <img src="../img/postevideos.png" alt="Cliques ici pour poster de nouvelles vidéos!" />
-                    </a>                    
-
+                    </a>
                 </div>
                 <footer>
 			<div class="block1">
