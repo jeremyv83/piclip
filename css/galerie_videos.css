@@ -94,7 +94,17 @@ header a:hover {
 	transition: all 0.2s;
 	border-bottom: solid 4px white;
 }
-
+button {
+	background-color: #151515;
+	border: none;
+	padding: 6px;
+	margin-top: 10px;
+}
+button:hover {
+	background-color: #2a2a2a;
+	color: red;
+	transition: 0.2s;
+}
 .block4 img {
 	width: 100px;
 	height: 56px;

@@ -23,29 +23,30 @@ if (isset($_POST['submit'])) {
                     if($email == $verifemail) {   
                         if($pseudo != "utilisateur") {
                             if((strlen($pseudo) <= 25) AND (strlen($pseudo) >= 6)){
+                                if(preg_match("/.[\S]/", $pseudo)){
                                 $TestUser = $bdd->query("SELECT id_user FROM users WHERE pseudo='$pseudo'");   
                                 if($TestUser->rowCount() < 1){
-                                    $testEmail = $bdd->query("SELECT id_user FROM users WHERE email='$email'");
-                                    if($testEmail->rowCount() <1){
-                                        $motdepasse = sha1($salt.$motdepasse);
+                                        $testEmail = $bdd->query("SELECT id_user FROM users WHERE email='$email'");
+                                        if($testEmail->rowCount() <1){
+                                            $motdepasse = sha1($salt.$motdepasse);
 
-                                        $sql= "INSERT INTO users(mot_de_passe, pseudo, email, date_naissance, date_inscript) VALUES (:motdepasse, :pseudo, :email, :date_naissance, :date_inscript)";
-                                        $req = $bdd->prepare($sql);  
+                                            $sql= "INSERT INTO users(mot_de_passe, pseudo, email, date_naissance, date_inscript) VALUES (:motdepasse, :pseudo, :email, :date_naissance, :date_inscript)";
+                                            $req = $bdd->prepare($sql);  
 
-                                        $req->execute(array(
-                                            'motdepasse' => $motdepasse,
-                                            'pseudo' => $pseudo,
-                                            'email' => $email,
-                                            'date_naissance' => $date_naissance,
-                                            'date_inscript' => $date_inscript,
-                                        ));
-                                        $UserData = $TestUser->fetch();
-                                        $SESSION["id"] = $UserData["id_user"];
-                                        header('Location: ../profil/profil.php');
-                                    }else $return = "Email déjà utilisé";  
-                                //header('Location: connect.php');
-                                }else $return = "Pseudo déjà utilisé";
-                                
+                                            $req->execute(array(
+                                                'motdepasse' => $motdepasse,
+                                                'pseudo' => $pseudo,
+                                                'email' => $email,
+                                                'date_naissance' => $date_naissance,
+                                                'date_inscript' => $date_inscript,
+                                            ));
+                                            $UserData = $TestUser->fetch();
+                                            $SESSION["id"] = $UserData["id_user"];
+                                            header('Location: ../profil/profil.php');
+                                        }else $return = "Email déjà utilisé";  
+                                    //header('Location: connect.php');
+                                    }else $return = "Pseudo déjà utilisé";
+                                }else $return = "Les espacements ne sont pas autorisé";                                     
                             }else $return = "Le pseudo doit être compris entre 6 et 25 caractères";
                             
                         }else $return = 'Le pseudo ne peut pas être "utilisateur"';                          

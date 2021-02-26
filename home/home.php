@@ -19,7 +19,7 @@ if(isset($_SESSION["id"])) {
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
 			rel="stylesheet"
 		/>
-		<title>Home</title>
+		<title>Acceuil</title>
 	</head>
 	<body>
 		<?php include("../navbar/navbar.php"); ?>

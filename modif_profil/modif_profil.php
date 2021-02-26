@@ -40,7 +40,7 @@ include("traitement.php");
                                         ?> <p style="color:#FF0000; font-size:small;"><?php echo $return; ?></p>
                                         <?php  
                                     } ?>
-                                    <input type="text" name="pseudo" placeholder="pseudo">
+                                    <input type="text" name="pseudo" placeholder="Pseudo">
                                     <button type="submit" id="submit" name="new_pseudo">Valider le pseudo</button>
 
 
@@ -66,7 +66,7 @@ include("traitement.php");
                                         ?> <p style="color:#FF0000; font-size:small;"><?php echo $return; ?></p>
                                         <?php  
                                         } ?>
-                                    <input type="text" name="prenom" placeholder="prenom">
+                                    <input type="text" name="prenom" placeholder="Prénom">
                                     <button type="submit" id="submit" name="new_prenom">Valider le prenom</button>
 
 
@@ -88,8 +88,8 @@ include("traitement.php");
                                         ?> <p style="color:#FF0000; font-size:small;"><?php echo $return; ?></p>
                                         <?php  
                                     } ?>
-                                    <input type="text" name="email" placeholder="email">
-                                    <input type="text" name="verif_email" placeholder="email">
+                                    <input type="text" name="email" placeholder="Email">
+                                    <input type="text" name="verif_email" placeholder="Répeter email">
                                     <button type="submit" id="submit" name="new_email">Valider l'adresse mail</button>
 
                                     <p> <b>Mot de passe </b> </p>

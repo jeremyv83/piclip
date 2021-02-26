@@ -11,8 +11,6 @@ $UserData = $RecupPseudo->fetch();
 $pseudo = $UserData['pseudo'];
 
 
-
-
 if(isset($_POST['submit'])) {
 
     date_default_timezone_set('Europe/Paris');
@@ -27,6 +25,7 @@ if(isset($_POST['submit'])) {
         $file_extension = strrchr($file_name, ".");
         $file_tmp_name = $_FILES['image']['tmp_name'];
         $extension_autorise = array('.jpg', '.JPG', '.png', '.PNG');
+        
         
        
         // Pour afficher la taille maximal accepter par le php.ini, il se trouve à wamp64/bin/php/

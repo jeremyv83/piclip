@@ -21,9 +21,9 @@
 				<img src="./icon-twitter.svg" alt="" />
 			</div>
 			<div class="dorian">
-				Dorian <img src="./icon-facebook.svg" alt="" />
+				Dorian <a href="https://www.facebook.com/profile.php?id=100008561526924"><img src="./icon-facebook.svg" alt="" /></a>
 				<img src="./icon-instagram.svg" alt="" />
-				<img src="./icon-twitter.svg" alt="" />
+				<a href="https://github.com/DorianLP"><img src="./icon-twitter.svg" alt="" /></a>
 			</div>
 		</div>
 		<section>
