@@ -23,10 +23,16 @@ $sql->execute();
                         <h3 class="titre">'.$date['titre'].'</h3>
                         <h3 class="pseudo">@'.$date['pseudo'].'</h3>
                     </div>
+                </a>
+                    <div class="heart">
+                        <button><img src="../img/heart_red.png"></button> 125
+                    </div>
+                <a href="../photo_click/photo_click.php?image='.$date['id_image'].'">  
                     <p>
                         '.$date['description'].'
                     </p>
                 </a>
+                
             </div>';
     }
 
