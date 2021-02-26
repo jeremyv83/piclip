@@ -43,7 +43,7 @@ require("traitement.php");
 						echo $file_dest;
 					} ?>"/></div>
 					<label for="file" class="label-file">Choisir une image...</label>
-					<input id="file" class="input-file" type="file" />
+					<input id="file" class="input-file" type="file" name="image" />
 					<br>
 					<input type="text" id="titre" name="titre" placeholder="Titre" />
 					
