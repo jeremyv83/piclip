@@ -13,6 +13,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../css/galerie.css" />
+		<link rel="icon" href="../img/Plan de travail 16.png"/>
 		<title>Galerie</title>
 	</head>
 	<body>
