@@ -1,18 +1,16 @@
 <?php
 require("../baseDeDonnee.php");
-
-$requete = "SELECT * FROM image INNER JOIN users ON image.id_user = users.id_user ORDER BY date_poste DESC"; 
+session_start();
+$id_user = $_SESSION["id"];
+$requete = "SELECT * FROM image INNER JOIN users ON image.id_user = users.id_user WHERE image.id_user='$id_user' ORDER BY date_poste DESC"; 
 $sql = $bdd -> prepare($requete);
 $sql->execute();
 
 
-$compteur=0;
+while($date = $sql->fetch()){
+    var_dump($date);
+}
 
-while($date = $sql->fetch())
-    {
-        var_dump($date);
-        echo "<br/>";
-    }
 // echo $compteur;
 // $date = $sql->fetch();
 // var_dump($date);

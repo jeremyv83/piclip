@@ -17,14 +17,16 @@ $sql->execute();
     for ($i = 0; $i < 4; $i++) {
         $date = $sql->fetch();
         echo '<div class="card">
-                <img src="'.$date['route_image'].'"/>
-                <div class="titre_pseudo">
-                    <h3 class="titre">'.$date['titre'].'</h3>
-                    <h3 class="pseudo">@'.$date['pseudo'].'</h3>
-                </div>
-                <p>
-                    '.$date['description'].'
-                </p>
+                <a href="../photo_click/photo_click.php?image='.$date['id_image'].'">
+                    <img src="'.$date['route_image'].'"/>
+                    <div class="titre_pseudo">
+                        <h3 class="titre">'.$date['titre'].'</h3>
+                        <h3 class="pseudo">@'.$date['pseudo'].'</h3>
+                    </div>
+                    <p>
+                        '.$date['description'].'
+                    </p>
+                </a>
             </div>';
     }
 

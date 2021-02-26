@@ -39,6 +39,9 @@ h1 {
 	padding: 1em 6em;
 	width: 70%;
 }
+.card a{
+	text-decoration: none;
+}
 .card img {
 	width: 100%;
 }

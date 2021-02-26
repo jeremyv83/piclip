@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+require("../baseDeDonnee.php");
+
+if(isset($_SESSION["id"])) {
+    $id_user = $_SESSION["id"];
+}else header("Location: ../login/se_connecter.php");
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -25,21 +36,7 @@
 
 		<h1>Vidéo</h1>
 		<div class="photos">
-			<div class="card">
-				<img src="../img/1.jpg" alt="" />
-				<h3 class="titre">Titre</h3>
-				<h2 class="pseudo">@pseudo</h2>
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					Fugiat nulla repellat maiores delectus assumenda vel placeat
-					illum beatae quos? Quam laudantium, quo inventore quas vel
-					aliquid officiis et doloribus consectetur?Lorem ipsum, dolor
-					sit amet consectetur adipisicing elit. Fugiat nulla repellat
-					maiores delectus assumenda vel placeat illum beatae quos?
-					Quam laudantium, quo inventore quas vel aliquid officiis et
-					doloribus consectetur?
-				</p>
-			</div>
+			<?php include("traitement.php") ?>
 		</div>
 
 		<footer>

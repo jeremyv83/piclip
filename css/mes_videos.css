@@ -44,6 +44,9 @@ h1 {
 	width: 22%;
 	transition-duration: 1s;
 }
+.card a{
+	text-decoration: none;
+}
 .card:hover {
 	background-color: #ffffff;
 	color: #151515;

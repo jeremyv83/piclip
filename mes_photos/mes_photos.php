@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+require("../baseDeDonnee.php");
+
+if(isset($_SESSION["id"])) {
+    $id_user = $_SESSION["id"];
+}else header("Location: ../login/se_connecter.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -13,6 +25,7 @@
 		<title>Mes photos</title>
 	</head>
 	<body>
+
 		<?php include("../navbar/navbar.php"); ?>
 		<!--<header>
 			<img src="../img/Plan de travail 6.png" alt="" />
@@ -24,7 +37,8 @@
 
 		<h1>Mes Photos</h1>
 		<div class="photos">
-			<div class="card">
+			<?php include("traitement.php") ?>
+			<!--<div class="card">
 				<img src="../img/1.jpg" alt="" />
 				<h3 class="titre">Titre</h3>
 				<p>
@@ -173,7 +187,7 @@
 					illum beatae quos? Quam laudantium, quo inventore quas vel
 					aliquid officiis et doloribus consectetur?
 				</p>
-			</div>
+			</div>-->
 		</div>
 
 		<footer>

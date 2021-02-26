@@ -43,6 +43,9 @@ img {
 	margin-top: 100px;
 	margin-bottom: 50px;
 }
+.card a{
+	text-decoration: none;
+}
 
 #logogris {
 	width: 150px;
