@@ -182,6 +182,9 @@ h1 {
 	height: 25%;
 	text-align: center;
 }
+.card a{
+	text-decoration: none;
+}
 .card:hover {
 	background-color: #ffffff;
 	color: #151515;
