@@ -44,7 +44,7 @@ h1 {
 	width: 22%;
 	transition-duration: 1s;
 }
-.card a{
+.card a {
 	text-decoration: none;
 }
 .card:hover {
@@ -106,6 +106,35 @@ h4:hover {
 	text-decoration: underline;
 }
 
+@media (max-width: 1400px) {
+	.photos {
+		display: flex;
+		flex-direction: column;
+	}
+	body {
+		margin: 10px 10px;
+	}
+	.card {
+		background-color: #2a2a2a;
+		margin: 10px;
+		padding: 10px;
+		transition-duration: 1s;
+		align-items: center;
+		flex: 0 0 auto;
+		width: 50%;
+		height: 25%;
+		text-align: center;
+	}
+	.card:hover {
+		transform: scale(1.1);
+	}
+}
+@media (max-width: 1100px) {
+	.card {
+		width: 75%;
+	}
+}
+
 @media (max-width: 700px) {
 	header {
 		display: flex;
@@ -113,5 +142,42 @@ h4:hover {
 		align-items: center;
 		justify-content: center;
 		margin-top: 10px;
+	}
+	.photos {
+		display: flex;
+		flex-direction: column;
+	}
+	body {
+		margin: 10px 10px;
+	}
+	.card {
+		background-color: #2a2a2a;
+		margin: 10px;
+		padding: 10px;
+		transition-duration: 1s;
+		align-items: center;
+		flex: 0 0 auto;
+		width: 85%;
+		height: 25%;
+		text-align: center;
+	}
+	.card:hover {
+		transform: scale(1);
+	}
+}
+@media (max-width: 400px) {
+	.card {
+		background-color: #2a2a2a;
+		margin: 10px;
+		padding: 10px;
+		transition-duration: 1s;
+		align-items: center;
+		flex: 0 0 auto;
+		width: 90%;
+		height: 25%;
+		text-align: center;
+	}
+	body {
+		margin: 10px 0px;
 	}
 }

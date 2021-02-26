@@ -86,8 +86,8 @@ include("traitement.php");
 				<h4>Utilisateurs</h4>
 			</div>
 			<div class="block4">
-				<h4>A propos</h4>
-				<a href="../bienvenue/bienvenue.php"
+            <h4><a href="../A_propos/A_propos.php">A propos</a></h4>
+				<a href="../bienvenue/bienvenue.html"
 					><img src="../img/Plan de travail 16.png" alt=""
 				/></a>
 			</div>
