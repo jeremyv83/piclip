@@ -22,6 +22,9 @@ while($date = $sql->fetch())
                         <p>
                             '.$date['description'].'
                         </p>
+                        <div class="suppr">
+                            <button>Supprimer le post</button>
+                        </div>
             </div>';
     }
 
