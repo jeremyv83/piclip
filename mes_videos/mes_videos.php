@@ -37,7 +37,7 @@ if(isset($_SESSION["id"])) {
 
 		<h1>Mes Vidéos</h1>
 		<div class="photos">
-		<?php include("traitement.php"); ?>
+			<?php include("traitement.php"); ?>
 		</div>
 
 		<footer>

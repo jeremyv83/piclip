@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 require("../baseDeDonnee.php");
 
 if(isset($_SESSION["id"])) {
