@@ -18,6 +18,7 @@ if(isset($_SESSION["id"])) {
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../css/galerie_photos.css" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link rel="icon" href="../img/Plan de travail 16.png"/>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
 			rel="stylesheet"
@@ -189,7 +190,7 @@ if(isset($_SESSION["id"])) {
 			</div>-->
 		</div>
 
-		<footer>
+		<!--<footer>
 			<div class="block1">
 				<h4>Conditions d'utilisation</h4>
 				<h4><a href="../home/home.php">Home</a></h4>
@@ -214,6 +215,6 @@ if(isset($_SESSION["id"])) {
 					><img src="../img/Plan de travail 16.png" alt=""
 				/></a>
 			</div>
-		</footer>
+		</footer>-->
 	</body>
 </html>
