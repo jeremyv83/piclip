@@ -12,8 +12,10 @@ $sql->execute();
 
 while($date = $sql->fetch())
     {
+        $id_video = $date['id_video'];
         echo '<div class="card">
-        <a href="../video_click/video_click.php?video='.$date['id_video'].'">
+                    <form method="POST">
+                        <a href="../video_click/video_click.php?video='.$date['id_video'].'">
                         <img src="'.$date['route_minia'].'"/>
                         <div class="titre_pseudo">
                             <h3 class="titre">'.$date['titre'].'</h3>
@@ -22,7 +24,21 @@ while($date = $sql->fetch())
                         <p>
                             '.$date['description'].'
                         </p>
+                        <div class="suppr">
+                            <button type="submit" name="supprimer">Supprimer le post</button>
+                            <input type="hidden" name="id" value="'.$id_video.'"></input> 
+                        </div>
+                    </form>
             </div>';
+    }
+
+    if(isset($_POST['supprimer'])){
+        $id_video=$_POST["id"];
+        $requete = "DELETE FROM video WHERE id_video = '$id_video'"; 
+        $suppr = $bdd -> prepare($requete);
+        $suppr->execute();
+        header("Location: mes_videos.php");
+        
     }
 
 

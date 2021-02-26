@@ -11,9 +11,10 @@ $sql->execute();
 
 
 while($date = $sql->fetch())
-    {
+    {   
+        $id_image = $date['id_image'];
         echo '<div class="card">
-                
+                    <form method="POST">
                         <img src="'.$date['route_image'].'"/>
                         <div class="titre_pseudo">
                             <h3 class="titre">'.$date['titre'].'</h3>
@@ -23,10 +24,24 @@ while($date = $sql->fetch())
                             '.$date['description'].'
                         </p>
                         <div class="suppr">
-                            <button>Supprimer le post</button>
+                            <button type="submit" name="supprimer">Supprimer le post</button>
+                            <input type="hidden" name="id" value="'.$id_image.'"></input> 
                         </div>
+                    </form>
             </div>';
+            
+            
     }
+
+    if(isset($_POST['supprimer'])){
+        $id_image=$_POST["id"];
+        $requete = "DELETE FROM image WHERE id_image = '$id_image'"; 
+        $suppr = $bdd -> prepare($requete);
+        $suppr->execute();
+        header("Location: mes_photos.php");
+        
+    }
+
 
 
 ?>

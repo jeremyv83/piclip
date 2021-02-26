@@ -1,8 +1,8 @@
 <?php
 
-require("traitement.php");
+						require("traitement.php");
 
-?>
+					?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -39,11 +39,13 @@ require("traitement.php");
 
             } ?>
 				<form method="POST" enctype="multipart/form-data">
-					<div class="parcourir"><img src="<?php if($_FILES){
+					<div class="parcourir"><img src="<?php if(isset($_POST['image'])){
 						echo $file_dest;
 					} ?>"/></div>
 					<label for="file" class="label-file">Choisir une image...</label>
+					
 					<input id="file" class="input-file" type="file" name="image"/>
+					<?php if(isset($_POST[''])) ?>
 					<br>
 					<input type="text" id="titre" name="titre" placeholder="Titre" />
 					
