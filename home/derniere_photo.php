@@ -25,7 +25,7 @@ $sql->execute();
                     </div>
                 </a>
                     <div class="heart">
-                        <button><img src="../img/heart_red.png"></button> 125
+                        <button><img src="../img/heart_red.png"></button> <span>125</span>
                     </div>
                 <a href="../photo_click/photo_click.php?image='.$date['id_image'].'">  
                     <p>
