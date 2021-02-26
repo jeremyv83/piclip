@@ -189,7 +189,7 @@ if(isset($_SESSION["id"])) {
 			</div>
 		</div>-->
 
-		<footer>
+		<!--<footer>
 			<div class="block1">
 				<h4>Conditions d'utilisation</h4>
 				<h4><a href="../home/home.php">Home</a></h4>
@@ -214,6 +214,6 @@ if(isset($_SESSION["id"])) {
 					><img src="../img/Plan de travail 16.png" alt=""
 				/></a>
 			</div>
-		</footer>
+		</footer>-->
 	</body>
 </html>
