@@ -187,7 +187,14 @@ h1 {
 	height: 300px;
 }
 /* Coeur rouge pas fini
- .heart button {
+.nblike {
+	margin-left: 5px;
+}
+.heart {
+	display: flex;
+	flex-direction: row-reverse;
+}
+.heart button {
 	text-align: right;
 	align-items: flex-end;
 	background-color: #2a2a2a;
@@ -205,7 +212,31 @@ h1 {
 }
 .heart button:hover {
 	background-color: #ffffff;
-} */
+}
+*/
+.heart {
+	display: flex;
+	flex-direction: row-reverse;
+}
+.nblike {
+	margin-left: 5px;
+}
+.heart button {
+	background: none;
+	border: none;
+}
+.heart i.far.fa-heart {
+	font-size: large;
+}
+.card:hover .heart i.far.fa-heart {
+	color: #2a2a2a;
+}
+/*card:hover button:active i.far.fa-heart {
+	color: crimson;
+}*/
+.heart .checked i.far.fa-heart {
+	color: crimson;
+}
 
 .card a {
 	text-decoration: none;
@@ -222,11 +253,22 @@ h1 {
 }
 .card:hover p,
 .card:hover h3,
-.card:hover h5 {
+.card:hover h5,
+.card:hover .nblike {
 	color: #151515;
 }
 .card:hover .heart span {
 	color: #151515;
+}
+.card:hover .heart .checked i.far.fa-heart {
+	color: crimson;
+}
+
+.heart button {
+	cursor: pointer;
+}
+.heart .checked:hover {
+	cursor: not-allowed;
 }
 
 .card p {

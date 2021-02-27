@@ -13,6 +13,9 @@ if(isset($_SESSION["id"])) {
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../css/home.css" />
+		<link rel="stylesheet" href="../css/all.min.css" />
+		<script src="https://kit.fontawesome.com/ddd8de2320.js" crossorigin="anonymous"></script>
+		
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link rel="icon" href="../img/Plan de travail 16.png"/>
 		<link
@@ -150,5 +153,6 @@ if(isset($_SESSION["id"])) {
 				/></a>
 			</div>
 		</footer>
+		<script src="../js/main.js"></script>
 	</body>
 </html>

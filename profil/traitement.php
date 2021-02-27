@@ -25,6 +25,9 @@ if(isset($_SESSION["id"])) {
     $date_inscript = implode('/',array_reverse(explode('-',$date_inscript_us)));
     $avatar = $donneeUser['route_avatar'];
 
+    $requete_like = "SELECT COUNT(*) FROM coeur WHERE coeur.id_user = " . $_SESSION["id"];
+    $nb_likes_user = $bdd -> query($requete_like)
+                         -> fetch();
 
 //  while ($row = $sql -> fetch()) {
   

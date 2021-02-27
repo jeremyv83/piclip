@@ -19,6 +19,7 @@ if(isset($_SESSION["id"])) {
 		<link rel="stylesheet" href="../css/galerie_photos.css" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link rel="icon" href="../img/Plan de travail 16.png"/>
+		<script src="https://kit.fontawesome.com/ddd8de2320.js" crossorigin="anonymous"></script>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
 			rel="stylesheet"
