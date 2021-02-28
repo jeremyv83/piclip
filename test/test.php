@@ -1,15 +1,17 @@
 <?php
 require("../baseDeDonnee.php");
 
-$requete = "SELECT * FROM image ORDER BY date_poste DESC"; 
+$requete = "SELECT * FROM image INNER JOIN users ON image.id_user = users.id_user ORDER BY date_poste DESC"; 
 $sql = $bdd -> prepare($requete);
 $sql->execute();
 
-$compteur=0;
+
+
+
 
 while($date = $sql->fetch())
     {
-        echo $date['titre'];
+        var_dump($requete
         echo "<br/>";
     }
 // echo $compteur;
