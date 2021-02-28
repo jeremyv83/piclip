@@ -59,7 +59,7 @@ for ($i = 0; $i < 4; $i++) {
       <?php }?>
   
       <a href="../video_click/video_click.php?video=<?php echo $date['id_video']; ?>" title="">
-      <p><?php echo $date['description']; ?></p>
+      <p class="overflow-ellipsis"><?php echo $date['description']; ?></p>
     </a>
   </div>
   
