@@ -30,7 +30,7 @@ while($date = $sql->fetch())
       ?>
       
       <div class="card">
-        <a href="../photo_click/photo_click.php?video=<?php echo $date['id_video']; ?>">
+        <a href="../video_click/video_click.php?video=<?php echo $date['id_video']; ?>">
           <img src="<?php echo $date['route_minia']; ?>" alt="<?php echo $date['titre']; ?>"/>
           <div class="titre_pseudo">
             <h3 class="titre"><?php echo $date['titre']; ?></h3>
@@ -61,7 +61,7 @@ while($date = $sql->fetch())
           </div>
           <?php }?>
       
-          <a href="../photo_click/photo_click.php?video=<?php echo $date['id_video']; ?>" title="">
+          <a href="../video_click/video_click.php?video=<?php echo $date['id_video']; ?>" title="">
           <p><?php echo $date['description']; ?></p>
         </a>
       </div>

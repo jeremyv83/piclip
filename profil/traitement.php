@@ -29,16 +29,7 @@ if(isset($_SESSION["id"])) {
     $nb_likes_user = $bdd -> query($requete_like)
                          -> fetch();
 
-    $requete_like_recu = "
-    SELECT COUNT(*) 
-    FROM coeur 
-    WHERE id_image IN ( SELECT id_image 
-                        FROM image 
-                        WHERE id_user = " . $_SESSION["id"] . ")
-    OR id_video IN (SELECT id_video 
-                    FROM video 
-                    WHERE id_user = " . $_SESSION["id"] ." )";
-
+    $requete_like_recu = "SELECT COUNT(*) FROM coeur WHERE id_image IN ( SELECT id_image FROM image WHERE id_user = " . $_SESSION["id"] . ") OR id_video IN (SELECT id_video FROM video WHERE id_user = " . $_SESSION["id"] ." )";
     $nb_likes_user_recu = $bdd -> query($requete_like_recu)
                                 -> fetch();
 
