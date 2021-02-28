@@ -24,6 +24,7 @@ for ($i = 0; $i < 4; $i++) {
   $sql_coeur->execute();
   
   $coeurs_image = $sql_coeur->fetchAll();
+  
 
 ?>
 
