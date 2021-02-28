@@ -43,8 +43,8 @@ include("traitement.php");
                                     <p> <b>Date de naissance:</b> <?php echo $date_naissance; ?></p>
                                     <p> <b>Adresse email: </b><?php echo $email; ?></p>
                                     <p> <b>Date d'inscription:</b> <?php echo $date_inscript; ?></p> 
-                                    <p> <b>Nombre de likes donné:</b> <?php echo $nb_likes_user[0]; ?></p>
-                                    <p> <b>Nombre de likes reçu:</b> <?php echo $nb_likes_user_recu[0]; ?></p>
+                                    <p> <b>Nombre de like donné:</b> <?php echo $nb_likes_user[0]; ?></p>
+                                    <p> <b>Nombre de like reçu:</b> <?php echo $nb_likes_user_recu[0]; ?></p>
                                 </div>
                                 <div class="imgavatar">
                                     <img id="avatar" src = "<?php echo $avatar ?>"> 
