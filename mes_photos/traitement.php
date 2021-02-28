@@ -2,6 +2,8 @@
 
 require("../baseDeDonnee.php");
 
+include("../poste_coeur/traitement_image.php");
+
 
 $id_user = $_SESSION["id"];
 $requete = "SELECT * FROM image INNER JOIN users ON image.id_user = users.id_user WHERE image.id_user='$id_user' ORDER BY date_poste DESC"; 

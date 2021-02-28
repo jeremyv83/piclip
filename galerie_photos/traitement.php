@@ -4,7 +4,7 @@
 
 require("../baseDeDonnee.php");
 
-include("../poste_coeur/traitement.php");
+include("../poste_coeur/traitement_image.php");
 
 // if(isset($_SESSION["id"])) {
 //     $id_user = $_SESSION["id"];

@@ -3,7 +3,7 @@
 require("../baseDeDonnee.php");
 
 
-include("../poste_coeur/traitement.php");
+include("../poste_coeur/traitement_image.php");
 
 
 $requete = "SELECT * FROM image INNER JOIN users ON image.id_user = users.id_user ORDER BY date_poste DESC"; 

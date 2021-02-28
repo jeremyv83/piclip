@@ -145,11 +145,15 @@ header a:hover {
 	border-bottom: solid 4px white;
 }
 
-button {
+.suppr button {
 	background-color: #151515;
 	border: none;
 	padding: 6px;
-	margin-top: 0px;
+	margin-top: 10px;
+}
+.suppr button:hover {
+	background-color: #2a2a2a;
+	color: red;
 }
 
 .block4 img {
