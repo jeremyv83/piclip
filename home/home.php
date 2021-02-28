@@ -13,12 +13,16 @@ if(isset($_SESSION["id"])) {
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../css/home.css" />
+		<link rel="stylesheet" href="../css/all.min.css" />
+		<script src="https://kit.fontawesome.com/ddd8de2320.js" crossorigin="anonymous"></script>
+		
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link rel="icon" href="../img/Plan de travail 16.png"/>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
 			rel="stylesheet"
 		/>
-		<title>Home</title>
+		<title>Acceuil</title>
 	</head>
 	<body>
 		<?php include("../navbar/navbar.php"); ?>
@@ -125,7 +129,7 @@ if(isset($_SESSION["id"])) {
 		</div>-->
 		<footer>
 			<div class="block1">
-				<h4><a href="../cg/cg.php">Conditions d'utilisation</h4>
+			<h4><a href="../cg/cg.php">Conditions d'utilisation</h4>
 				<h4><a href="../home/home.php">Home</a></h4>
 				<h4><a href="../galerie/galerie.php">Galerie</a></h4>
 			</div>
@@ -143,11 +147,12 @@ if(isset($_SESSION["id"])) {
 				<h4>Utilisateurs</h4>
 			</div>
 			<div class="block4">
-				<h4>A propos</h4>
-				<a href="../bienvenue/bienvenue.php"
+				<h4><a href="../A_propos/A_propos.php">A propos</a></h4>
+				<a href="../bienvenue/bienvenue.html"
 					><img src="../img/Plan de travail 16.png" alt=""
 				/></a>
 			</div>
 		</footer>
+		<script src="../js/main.js"></script>
 	</body>
 </html>

@@ -39,15 +39,17 @@ if(isset($_POST['new_pseudo'])){
     if(!empty($new_pseudo)){
         if($new_pseudo != "utilisateur") {
             if((strlen($new_pseudo) <= 25) AND (strlen($new_pseudo) >= 6)){
-                $TestUser = $bdd->query("SELECT id_user FROM users WHERE pseudo='$new_pseudo'");   
-                if($TestUser->rowCount() < 1){
-                    
-                    $sql_modif = "UPDATE users SET pseudo = :new_pseudo WHERE id_user = '$id_user'";
-                    $req = $bdd->prepare($sql_modif);
-                    $req->execute(array('new_pseudo'=>$new_pseudo));
+                if(preg_match("/.[\S]/", $new_pseudo)){
+                    $TestUser = $bdd->query("SELECT id_user FROM users WHERE pseudo='$new_pseudo'");   
+                    if($TestUser->rowCount() < 1){
+                        
+                        $sql_modif = "UPDATE users SET pseudo = :new_pseudo WHERE id_user = '$id_user'";
+                        $req = $bdd->prepare($sql_modif);
+                        $req->execute(array('new_pseudo'=>$new_pseudo));
 
-                    header("Location: ../modif_profil/modif_profil.php");
-                }else $return = "Pseudo déjà utilisé";
+                        header("Location: ../modif_profil/modif_profil.php");
+                    }else $return = "Pseudo déjà utilisé";
+                }else $return = "Les espacements ne sont pas autorisé";
             }else $return = "Le pseudo doit être compris entre 6 et 25 caractères";    
         }else $return = 'Le pseudo ne peut pas être "utilisateur"'; 
     }else $return = 'Champs vide';   

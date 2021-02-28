@@ -10,6 +10,7 @@ require("traitement.php")
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../css/poste_video.css" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link rel="icon" href="../img/Plan de travail 16.png"/>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
 			rel="stylesheet"
@@ -23,13 +24,7 @@ require("traitement.php")
 		<div class="photos">
 			<div class="card">
 				<form method="POST" enctype="multipart/form-data">
-				<div class="ajoute">
-					<label for="video">Ajout d'une vidéo..</label>
-					<input type="file" name="video"/>
-					<label for="minia">Ajout d'une vidéo..</label>
-					<input type="file" name="minia"/>
-					
-				</div>
+				
 				<?php 
             		// afficher le(s) message(s) d'erreur(s)
             		if(isset($_POST['submit']) AND isset($error_choix)){ 
@@ -40,6 +35,13 @@ require("traitement.php")
 				<div class="parcourir"><?php if(isset($file_dest_minia)){
 						echo '<img src="'.$file_dest_minia.'"/>';
 					} ?></div>
+					<div class="ajoute">
+					<label for="video" class="label-file">Ajout d'une vidéo..</label>
+					<input id="video" class="input-file" type="file" name="video"/>
+					<label for="minia" class="label-file">Ajout d'une maniature vidéo..</label>
+					<input id="minia" class="input-file" type="file" name="minia"/>
+					
+				</div>
 				<input type="text" id="titre" name="titre" placeholder="Titre" />
 				<h2 class="pseudo">@<?php echo $pseudo; ?></h2>
 				<textarea

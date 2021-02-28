@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+require("../baseDeDonnee.php");
+
+if(isset($_SESSION["id"])) {
+    $id_user = $_SESSION["id"];
+}else header("Location: ../login/se_connecter.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -6,6 +18,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../css/photo_click.css" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link rel="icon" href="../img/Plan de travail 16.png"/>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
 			rel="stylesheet"
@@ -24,21 +37,7 @@
 
 		<h1>Photos</h1>
 		<div class="photos">
-			<div class="card">
-				<img src="../img/1.jpg" alt="" />
-				<h3 class="titre">Titre</h3>
-				<h2 class="pseudo">@pseudo</h2>
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					Fugiat nulla repellat maiores delectus assumenda vel placeat
-					illum beatae quos? Quam laudantium, quo inventore quas vel
-					aliquid officiis et doloribus consectetur?Lorem ipsum, dolor
-					sit amet consectetur adipisicing elit. Fugiat nulla repellat
-					maiores delectus assumenda vel placeat illum beatae quos?
-					Quam laudantium, quo inventore quas vel aliquid officiis et
-					doloribus consectetur?
-				</p>
-			</div>
+			<?php include("traitement.php"); ?>
 		</div>
 
 		<footer>

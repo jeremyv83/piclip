@@ -10,6 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="../css/formulaire_inscription.css" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link rel="icon" href="../img/Plan de travail 16.png"/>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
 			rel="stylesheet"

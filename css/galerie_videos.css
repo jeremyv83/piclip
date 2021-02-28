@@ -24,7 +24,14 @@ header img {
 	width: 100px;
 	height: 56px;
 }
-
+.titre_pseudo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.pseudo {
+	margin: 5px;
+}
 h1 {
 	text-align: center;
 	text-decoration: underline;
@@ -36,30 +43,89 @@ h1 {
 	flex-wrap: wrap;
 	flex-direction: row;
 	justify-content: space-evenly;
+	align-items: center;
+}
+.heart {
+	display: flex;
+	flex-direction: row-reverse;
+}
+.nblike {
+	margin-left: 5px;
+}
+.heart button {
+	background: none;
+	border: none;
+}
+.heart i.far.fa-heart {
+	font-size: large;
+}
+.card:hover .heart i.far.fa-heart {
+	color: #2a2a2a;
+}
+/*card:hover button:active i.far.fa-heart {
+	color: crimson;
+}*/
+.heart .checked i.far.fa-heart {
+	color: crimson;
+}
+.card:hover p,
+.card:hover h3,
+.card:hover h5,
+.card:hover .nblike {
+	color: #151515;
+}
+.card:hover .heart span {
+	color: #151515;
+}
+.card:hover .heart .checked i.far.fa-heart {
+	color: crimson;
+}
+
+.heart button {
+	cursor: pointer;
+}
+.heart .checked:hover {
+	cursor: not-allowed;
+}
+.card a {
+	text-decoration: none;
 }
 .card {
 	background-color: #2a2a2a;
-	margin: 1.5em auto;
+	margin: 10px;
 	padding: 10px;
-	width: 22%;
+	transition-duration: 1s;
+	align-items: center;
+	flex: 0 0 auto;
+	width: 25%;
+	height: 25%;
+	text-align: center;
+}
+.card img {
+	max-width: 100%;
+	height: 300px;
 }
 .card:hover {
 	background-color: #ffffff;
 	color: #151515;
 	margin: 10px;
 	padding: 10px;
-	transition: all 0.5s;
+	transition: all 1s;
 	box-shadow: 0 0 1em #fff;
+	transform: scale(1.3);
+	z-index: 1;
+	/*transition-duration: 0.5s;*/
+	/*transition-delay: 0.5s;*/
 }
 .card:hover p,
 .card:hover h3 {
 	color: #151515;
 }
+.card p {
+	text-align: left;
+}
 .titre {
 	margin: 0.5em 0;
-}
-.card img {
-	width: 100%;
 }
 header a {
 	line-height: 50px;
@@ -70,8 +136,18 @@ header a:hover {
 	transition: all 0.2s;
 	border-bottom: solid 4px white;
 }
-
-.block4 img {
+.suppr button {
+	background-color: #151515;
+	border: none;
+	padding: 6px;
+	margin-top: 10px;
+}
+.suppr button:hover {
+	background-color: #2a2a2a;
+	color: red;
+	transition: 0.2s;
+}
+*/ .block4 img {
 	width: 100px;
 	height: 56px;
 }
@@ -96,6 +172,30 @@ h4:hover {
 	text-decoration: underline;
 }
 
+@media (max-width: 1100px) {
+	.photos {
+		display: flex;
+		flex-direction: column;
+	}
+	body {
+		margin: 10px 10px;
+	}
+	.card {
+		background-color: #2a2a2a;
+		margin: 10px;
+		padding: 10px;
+		transition-duration: 1s;
+		align-items: center;
+		flex: 0 0 auto;
+		width: 50%;
+		height: 25%;
+		text-align: center;
+	}
+	.card:hover {
+		transform: scale(1);
+	}
+}
+
 @media (max-width: 700px) {
 	header {
 		display: flex;
@@ -103,5 +203,42 @@ h4:hover {
 		align-items: center;
 		justify-content: center;
 		margin-top: 10px;
+	}
+	.photos {
+		display: flex;
+		flex-direction: column;
+	}
+	body {
+		margin: 10px 10px;
+	}
+	.card {
+		background-color: #2a2a2a;
+		margin: 10px;
+		padding: 10px;
+		transition-duration: 1s;
+		align-items: center;
+		flex: 0 0 auto;
+		width: 85%;
+		height: 25%;
+		text-align: center;
+	}
+	.card:hover {
+		transform: scale(1);
+	}
+}
+@media (max-width: 400px) {
+	.card {
+		background-color: #2a2a2a;
+		margin: 10px;
+		padding: 10px;
+		transition-duration: 1s;
+		align-items: center;
+		flex: 0 0 auto;
+		width: 90%;
+		height: 25%;
+		text-align: center;
+	}
+	body {
+		margin: 10px 0px;
 	}
 }

@@ -70,6 +70,7 @@ header img {
 	line-height: 0;
 	height: 300px;
 }
+
 #slides .slide {
 	width: 25%;
 	float: left;
@@ -117,10 +118,10 @@ header img {
 	margin: 0 -50px 0 0;
 	display: block;
 }
-#slide1:checked ~ #controls label:nth-last-child(2),
-#slide2:checked ~ #controls label:nth-last-child(3),
-#slide3:checked ~ #controls label:nth-last-child(4),
-#slide4:checked ~ #controls label:nth-last-child(1) {
+#slide1:checked ~ #controls label:nth-last-child(1),
+#slide2:checked ~ #controls label:nth-last-child(4),
+#slide3:checked ~ #controls label:nth-last-child(3),
+#slide4:checked ~ #controls label:nth-last-child(2) {
 	background: url(../img/130882.svg) no-repeat;
 	float: left;
 	margin: 0 0 0 -50px;
@@ -175,9 +176,70 @@ h1 {
 	margin: 10px;
 	padding: 10px;
 	transition-duration: 1s;
+	align-items: center;
 	flex: 0 0 auto;
 	width: 25%;
-	height: 100%;
+	height: 25%;
+	text-align: center;
+}
+.card img {
+	max-width: 100%;
+	height: 300px;
+}
+/* Coeur rouge pas fini
+.nblike {
+	margin-left: 5px;
+}
+.heart {
+	display: flex;
+	flex-direction: row-reverse;
+}
+.heart button {
+	text-align: right;
+	align-items: flex-end;
+	background-color: #2a2a2a;
+	border: none;
+	transition-duration: 1s;
+}
+
+.card:hover .heart button {
+	background-color: #fff;
+	transition: all 0.5s;
+}
+.heart img {
+	width: 20px;
+	height: 20px;
+}
+.heart button:hover {
+	background-color: #ffffff;
+}
+*/
+.heart {
+	display: flex;
+	flex-direction: row-reverse;
+}
+.nblike {
+	margin-left: 5px;
+}
+.heart button {
+	background: none;
+	border: none;
+}
+.heart i.far.fa-heart {
+	font-size: large;
+}
+.card:hover .heart i.far.fa-heart {
+	color: #2a2a2a;
+}
+/*card:hover button:active i.far.fa-heart {
+	color: crimson;
+}*/
+.heart .checked i.far.fa-heart {
+	color: crimson;
+}
+
+.card a {
+	text-decoration: none;
 }
 .card:hover {
 	background-color: #ffffff;
@@ -190,12 +252,35 @@ h1 {
 	z-index: 1;
 }
 .card:hover p,
-.card:hover h3 {
+.card:hover h3,
+.card:hover h5,
+.card:hover .nblike {
 	color: #151515;
 }
+.card:hover .heart span {
+	color: #151515;
+}
+.card:hover .heart .checked i.far.fa-heart {
+	color: crimson;
+}
 
-.card img {
-	width: 100%; 
+.heart button {
+	cursor: pointer;
+}
+.heart .checked:hover {
+	cursor: not-allowed;
+}
+
+.card p {
+	text-align: left;
+}
+.titre_pseudo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.pseudo {
+	margin: 5px;
 }
 .titre {
 	margin: 5px;
@@ -238,6 +323,24 @@ h4:hover {
 	text-decoration: underline;
 }
 
+@media (max-width: 900px) {
+	.dernieres_photos {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.card {
+		background-color: #2a2a2a;
+		margin: 10px;
+		padding: 10px;
+		transition-duration: 1s;
+		align-items: center;
+		flex: 0 0 auto;
+		width: 80%;
+		height: 100%;
+	}
+}
 @media (max-width: 700px) {
 	header {
 		display: flex;
@@ -245,5 +348,64 @@ h4:hover {
 		align-items: center;
 		justify-content: center;
 		margin-top: 10px;
+	}
+	body {
+		margin: 10px 10px;
+	}
+	footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 2em;
+		height: auto;
+	}
+	.block1 {
+		text-align: center;
+	}
+	.block2 {
+		text-align: center;
+	}
+	.block3 {
+		text-align: center;
+	}
+	.block4 {
+		text-align: center;
+	}
+}
+
+@media (max-width: 550px) {
+	.dernieres_photos {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.card {
+		background-color: #2a2a2a;
+		margin: 10px;
+		padding: 10px;
+		transition-duration: 1s;
+		align-items: center;
+
+		width: 100%;
+	}
+	body {
+		margin: 10px 10px;
+	}
+	.card:hover {
+		background-color: #ffffff;
+		color: #151515;
+		margin: 10px;
+		padding: 10px;
+		transition: all 0.5s;
+		box-shadow: 0 0 1em #fff;
+		transform: scale(1);
+		z-index: 1;
+	}
+}
+@media (max-width: 460px) {
+	#slider {
+		display: none;
 	}
 }
