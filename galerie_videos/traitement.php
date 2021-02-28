@@ -62,7 +62,7 @@ while($date = $sql->fetch())
           <?php }?>
       
           <a href="../video_click/video_click.php?video=<?php echo $date['id_video']; ?>" title="">
-          <p><?php echo $date['description']; ?></p>
+          <p class="overflow-ellipsis"><?php echo $date['description']; ?></p>
         </a>
       </div>
       

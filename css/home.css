@@ -179,7 +179,7 @@ h1 {
 	align-items: center;
 	flex: 0 0 auto;
 	width: 25%;
-	height: 25%;
+	height: 405px;
 	text-align: center;
 }
 .card img {
@@ -273,6 +273,12 @@ h1 {
 
 .card p {
 	text-align: left;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.overflow-ellipsis {
+	text-overflow: ellipsis;
 }
 .titre_pseudo {
 	display: flex;

@@ -123,6 +123,12 @@ h1 {
 }
 .card p {
 	text-align: left;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.overflow-ellipsis {
+	text-overflow: ellipsis;
 }
 .titre {
 	margin: 0.5em 0;

@@ -61,9 +61,10 @@ for ($i = 0; $i < 4; $i++) {
     <?php }?>
 
     <a href="../photo_click/photo_click.php?image=<?php echo $date['id_image']; ?>" title="">
-    <p><?php echo $date['description']; ?></p>
+    <p class="overflow-ellipsis"><?php echo $date['description']; ?></p>
   </a>
 </div>
 
 <?php
 }
+
