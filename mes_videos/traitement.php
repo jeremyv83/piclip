@@ -21,7 +21,7 @@ while($date = $sql->fetch())
                             <h3 class="titre">'.$date['titre'].'</h3>
                             <h3 class="pseudo">@'.$date['pseudo'].'</h3>
                         </div>
-                        <p>
+                        <p class="overflow-ellipsis">
                             '.$date['description'].'
                         </p>
                         <div class="suppr">
